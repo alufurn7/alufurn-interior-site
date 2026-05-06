@@ -348,7 +348,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
                                 <div className="pt-2">
                                     <a
-                                        href="https://wa.me/911234567890"
+                                        href="https://wa.me/917033233397?text=Hi%20I%27m%20interested%20in%20ALUFURN%20custom%20solutions.%20Please%20share%20details."
                                         target="_blank"
                                         className="w-full flex items-center justify-center gap-2 text-white/40 hover:text-[#C8A96A] text-[10px] font-bold uppercase tracking-widest transition-colors"
                                     >

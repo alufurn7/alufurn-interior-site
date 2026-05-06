@@ -96,7 +96,7 @@ export default function FloatingActions() {
 
     const openWhatsApp = useCallback(() => {
         window.open(
-            "https://wa.me/917763970474?text=Hi%20I%27m%20interested%20in%20ALUFURN.%20Please%20share%20details.",
+            "https://wa.me/917033233397?text=Hi%20I%27m%20interested%20in%20ALUFURN%20custom%20solutions.%20Please%20share%20details.",
             "_blank",
             "noopener,noreferrer"
         );
