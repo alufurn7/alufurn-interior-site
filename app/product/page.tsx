@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import CategoryNav, { type Category } from "@/components/CategoryNav";
 import ProductCard from "@/components/ProductCard";
+import { FilterPills } from "@/components/FilterPills";
 import QuoteModal from "@/components/QuoteModal";
 
 /* ──────────────────────────────────────────────
@@ -23,6 +24,7 @@ interface Product {
     title: string;
     subtitle: string;
     image: string;
+    tags: string[];
 }
 
 interface CategorySection {
@@ -30,6 +32,7 @@ interface CategorySection {
     heading: string;
     tagline: string;
     description: string;
+    filters: string[];
     products: Product[];
 }
 
@@ -40,36 +43,43 @@ const sections: CategorySection[] = [
         tagline: "Where Culinary Art Meets Architecture",
         description:
             "Precision-engineered aluminium kitchens that blend cutting-edge functionality with timeless elegance. Every surface, every detail — designed for the way you live.",
+        filters: ["All", "Light Tones", "Dark Tones", "Neutral", "U-Shape", "L-Shape", "Parallel"],
         products: [
             {
                 title: "Linear Series",
                 subtitle: "Minimalist Handleless",
                 image: "/images/linear-series.webp",
+                tags: ["Light Tones", "Parallel"],
             },
             {
                 title: "Island Pro",
                 subtitle: "Open Plan Kitchen",
                 image: "/images/island-pro.webp",
+                tags: ["Neutral", "L-Shape"],
             },
             {
                 title: "Classic Matte",
                 subtitle: "Traditional Elegance",
                 image: "/images/classic-matte.webp",
+                tags: ["Dark Tones", "U-Shape"],
             },
             {
                 title: "Modular Max",
                 subtitle: "Compact Solutions",
                 image: "/images/modular_max.webp",
+                tags: ["Light Tones", "L-Shape"],
             },
             {
                 title: "Luxury Bespoke",
                 subtitle: "Custom Built",
                 image: "/images/luxury_bespoke.webp",
+                tags: ["Dark Tones", "U-Shape"],
             },
             {
                 title: "Urban Loft",
                 subtitle: "Industrial Chic",
                 image: "/images/urban-loft.webp",
+                tags: ["Neutral", "Parallel"],
             },
         ],
     },
@@ -79,36 +89,43 @@ const sections: CategorySection[] = [
         tagline: "Organize Life, Beautifully",
         description:
             "Intelligent storage crafted from premium aluminium profiles. Walk-ins, sliding systems, and fitted wardrobes that transform your personal space.",
+        filters: ["All", "Sliding", "Hinged", "Walk-in", "With Dressing Area"],
         products: [
             {
                 title: "Walk-In Elite",
                 subtitle: "Full Room System",
                 image: "/images/walk-in-elite.webp",
+                tags: ["Walk-in", "With Dressing Area"],
             },
             {
                 title: "Sliding Luxe",
                 subtitle: "Space Saving Design",
                 image: "/images/sliding-luxe.webp",
+                tags: ["Sliding"],
             },
             {
                 title: "Fitted Pro",
                 subtitle: "Wall-to-Wall",
                 image: "/images/fitted-pro.webp",
+                tags: ["Hinged"],
             },
             {
                 title: "Hinged Classic",
                 subtitle: "Traditional Doors",
                 image: "/images/hinged-classic.webp",
+                tags: ["Hinged"],
             },
             {
                 title: "Modular Cube",
                 subtitle: "Customizable Units",
                 image: "/images/modular-cube.webp",
+                tags: ["Sliding"],
             },
             {
                 title: "Dresser Suite",
                 subtitle: "Integrated Vanity",
                 image: "/images/dresser-suite.webp",
+                tags: ["With Dressing Area", "Walk-in"],
             },
         ],
     },
@@ -118,36 +135,43 @@ const sections: CategorySection[] = [
         tagline: "Refined Bathroom Luxury",
         description:
             "Waterproof aluminium vanities with premium finishes. Engineered for durability, designed for the spa-like bathroom experience you deserve.",
+        filters: ["All", "Modern", "Classic"],
         products: [
             {
                 title: "Floating Vanity",
                 subtitle: "Wall Mounted",
                 image: "/images/floating-vanity.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Double Basin",
                 subtitle: "His & Hers",
                 image: "/images/double-basin.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Compact Unit",
                 subtitle: "Powder Room",
                 image: "/images/compact-unit.webp",
+                tags: ["Classic"],
             },
             {
                 title: "Mirror Cabinet",
                 subtitle: "Storage & Light",
                 image: "/images/mirror-cabinet.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Luxury Console",
                 subtitle: "Freestanding",
                 image: "/images/luxury-console.webp",
+                tags: ["Classic"],
             },
             {
                 title: "Corner Unit",
                 subtitle: "Space Optimizer",
                 image: "/images/corner-unit.webp",
+                tags: ["Classic"],
             },
         ],
     },
@@ -157,36 +181,43 @@ const sections: CategorySection[] = [
         tagline: "Doorways to Distinction",
         description:
             "Architectural aluminium doors that make a statement. Pivot, sliding, and hinged systems with precision-milled profiles and designer finishes.",
+        filters: ["All", "Modern", "Classic"],
         products: [
             {
                 title: "Pivot Grand",
                 subtitle: "Statement Entry",
                 image: "/images/pivot-grand.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Barn Slider",
                 subtitle: "Rustic Modern",
                 image: "/images/barn-slider.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Flush Panel",
                 subtitle: "Seamless Design",
                 image: "/images/flush-panel.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Glass Divide",
                 subtitle: "Transparent Living",
                 image: "/images/glass-divide.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Hidden Door",
                 subtitle: "Secret Passage",
                 image: "/images/hidden-door.webp",
+                tags: ["Classic"],
             },
             {
                 title: "French Style",
                 subtitle: "Classic Pair",
                 image: "/images/french-style.webp",
+                tags: ["Classic"],
             },
         ],
     },
@@ -196,23 +227,26 @@ const sections: CategorySection[] = [
         tagline: "Surfaces That Inspire",
         description:
             "Architectural-grade aluminium panels for facades, feature walls, and ceiling systems. Unlimited finishes, engineered for Indian climates.",
+        filters: ["All", "Modern", "Classic"],
         products: [
             {
                 title: "Facade System",
                 subtitle: "Exterior Cladding",
                 image: "/images/facade-system.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Feature Wall",
                 subtitle: "Interior Accent",
                 image: "/images/feature-wall.webp",
+                tags: ["Modern"],
             },
             {
                 title: "Wall Panel",
                 subtitle: "Suspended System",
                 image: "/images/wall-panel.webp",
+                tags: ["Classic"],
             },
-
         ],
     },
 ];
@@ -230,6 +264,134 @@ const heroImages: Record<string, string> = {
     "aluminium-panels":
         "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000&auto=format&fit=crop",
 };
+
+/* ──────────────────────────────────────────────
+   Filterable Section Component
+   ────────────────────────────────────────────── */
+function FilterableSection({
+    section,
+    sectionIndex,
+    onOpenQuote,
+}: {
+    section: CategorySection;
+    sectionIndex: number;
+    onOpenQuote: () => void;
+}) {
+    const [activeFilter, setActiveFilter] = useState("All");
+
+    const filteredProducts =
+        activeFilter === "All"
+            ? section.products
+            : section.products.filter((p) => p.tags.includes(activeFilter));
+
+    return (
+        <section
+            id={section.id}
+            className={`py-20 md:py-32 ${sectionIndex % 2 === 0 ? "bg-white" : "bg-brand-surface"}`}
+        >
+            <div className="container mx-auto px-6 md:px-12">
+                {/* Section Header */}
+                <div className="max-w-3xl mb-10 md:mb-14">
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold"
+                    >
+                        {section.tagline}
+                    </motion.span>
+
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
+                        className="text-3xl md:text-5xl lg:text-6xl font-bold text-brand-primary tracking-tighter uppercase leading-none mb-6"
+                    >
+                        {section.heading}
+                    </motion.h2>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="text-brand-text-muted text-sm md:text-base font-light leading-relaxed max-w-2xl"
+                    >
+                        {section.description}
+                    </motion.p>
+                </div>
+
+                {/* Filter Pills */}
+                <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.25 }}
+                >
+                    <FilterPills
+                        filters={section.filters}
+                        activeFilter={activeFilter}
+                        onFilterChange={setActiveFilter}
+                    />
+                </motion.div>
+
+                {/* Product Grid */}
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={activeFilter}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -8 }}
+                        transition={{ duration: 0.35 }}
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 min-h-[200px]"
+                    >
+                        {filteredProducts.length > 0 ? (
+                            filteredProducts.map((product, index) => (
+                                <ProductCard
+                                    key={product.title}
+                                    title={product.title}
+                                    subtitle={product.subtitle}
+                                    image={product.image}
+                                    index={index}
+                                />
+                            ))
+                        ) : (
+                            <div className="col-span-full flex items-center justify-center py-16">
+                                <p className="text-brand-text-muted text-sm uppercase tracking-widest font-light">
+                                    No products match this filter — try &ldquo;All&rdquo;
+                                </p>
+                            </div>
+                        )}
+                    </motion.div>
+                </AnimatePresence>
+
+                {/* Section CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="mt-16 md:mt-20 flex justify-center"
+                >
+                    <button
+                        onClick={onOpenQuote}
+                        className="group/btn relative inline-flex items-center gap-3 overflow-hidden border border-brand-primary/20 text-brand-primary px-10 md:px-14 py-4 md:py-5 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.3em] transition-all duration-500 hover:border-brand-primary hover:tracking-[0.45em]"
+                    >
+                        <span className="absolute inset-0 bg-brand-primary scale-x-0 origin-left group-hover/btn:scale-x-100 transition-transform duration-500 ease-out" />
+                        <span className="relative z-10 group-hover/btn:text-white transition-colors duration-500">
+                            Get Quote for {section.heading}
+                        </span>
+                        <ArrowRight
+                            size={14}
+                            className="relative z-10 group-hover/btn:text-white transition-all duration-300 group-hover/btn:translate-x-1"
+                        />
+                    </button>
+                </motion.div>
+            </div>
+        </section>
+    );
+}
 
 /* ──────────────────────────────────────────────
    Products Page Component
@@ -312,7 +474,6 @@ export default function ProductsPage() {
 
     /* ── Active hero image ── */
     const activeHeroImage = heroImages[activeCategory] || heroImages.kitchen;
-    const activeCategoryData = categories.find((c) => c.id === activeCategory);
 
     return (
         <div className="pt-24 md:pt-32">
@@ -444,129 +605,46 @@ export default function ProductsPage() {
             />
 
             {/* ═══════════════════════════════════════
-                Product Sections
+                Product Sections (each with its own filter state)
                ═══════════════════════════════════════ */}
             {sections.map((section, sectionIndex) => (
-                <section
+                <FilterableSection
                     key={section.id}
-                    id={section.id}
-                    className={`py-20 md:py-32 ${sectionIndex % 2 === 0 ? "bg-white" : "bg-brand-surface"
-                        }`}
-                >
-                    <div className="container mx-auto px-6 md:px-12">
-                        {/* Section Header */}
-                        <div className="max-w-3xl mb-16 md:mb-20">
-                            <motion.span
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold"
-                            >
-                                {section.tagline}
-                            </motion.span>
-
-                            <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.7, delay: 0.1 }}
-                                className="text-3xl md:text-5xl lg:text-6xl font-bold text-brand-primary tracking-tighter uppercase leading-none mb-6"
-                            >
-                                {section.heading}
-                            </motion.h2>
-
-                            <motion.p
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                                className="text-brand-text-muted text-sm md:text-base font-light leading-relaxed max-w-2xl"
-                            >
-                                {section.description}
-                            </motion.p>
-                        </div>
-
-                        {/* Product Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                            {section.products.map((product, index) => (
-                                <ProductCard
-                                    key={product.title}
-                                    title={product.title}
-                                    subtitle={product.subtitle}
-                                    image={product.image}
-                                    index={index}
-                                />
-                            ))}
-                        </div>
-
-                        {/* Section CTA */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 }}
-                            className="mt-16 md:mt-20 flex justify-center"
-                        >
-                            <button
-                                onClick={() => setIsQuoteOpen(true)}
-                                className="group/btn relative inline-flex items-center gap-3 overflow-hidden border border-brand-primary/20 text-brand-primary px-10 md:px-14 py-4 md:py-5 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.3em] transition-all duration-500 hover:border-brand-primary hover:tracking-[0.45em]"
-                            >
-                                <span className="absolute inset-0 bg-brand-primary scale-x-0 origin-left group-hover/btn:scale-x-100 transition-transform duration-500 ease-out" />
-                                <span className="relative z-10 group-hover/btn:text-white transition-colors duration-500">
-                                    Get Quote for {section.heading}
-                                </span>
-                                <ArrowRight
-                                    size={14}
-                                    className="relative z-10 group-hover/btn:text-white transition-all duration-300 group-hover/btn:translate-x-1"
-                                />
-                            </button>
-                        </motion.div>
-                    </div>
-                </section>
+                    section={section}
+                    sectionIndex={sectionIndex}
+                    onOpenQuote={() => setIsQuoteOpen(true)}
+                />
             ))}
 
             {/* ═══════════════════════════════════════
                 Bottom CTA Section
                ═══════════════════════════════════════ */}
-            <section className="relative py-24 md:py-32 bg-brand-primary-deep text-white overflow-hidden">
-                {/* Background texture */}
-                <div className="absolute inset-0 opacity-[0.07]">
-                    <Image
-                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop"
-                        alt=""
-                        fill
-                        className="object-cover"
-                        sizes="100vw"
-                    />
-                </div>
-
-                {/* Grid overlay */}
-                <div
-                    className="absolute inset-0 opacity-[0.04] z-[1]"
-                    style={{
-                        backgroundImage:
-                            "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
-                        backgroundSize: "40px 40px",
-                    }}
-                />
-
-                <div className="container mx-auto px-6 md:px-12 relative z-10 text-center max-w-3xl">
-                    <motion.div
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: 1 }}
+            <section className="py-32 bg-white flex justify-center items-center border-t border-brand-border">
+                <div className="container mx-auto px-6 md:px-12 text-center max-w-3xl">
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1 }}
-                        className="w-12 h-[1px] bg-brand-gold mx-auto mb-8"
+                        className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold"
+                    >
+                        CUSTOM REQUIREMENTS
+                    </motion.span>
+
+                    <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "40px" }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="h-px bg-brand-gold mx-auto mb-8"
                     />
 
                     <motion.h2
                         initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-6 tracking-tight"
-                        style={{ fontFamily: "var(--font-display)" }}
+                        className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand-primary tracking-tighter"
                     >
-                        Can&apos;t Find What You Need?
+                        Can&apos;t Find What You <em className="font-light italic text-brand-gold" style={{ fontFamily: "var(--font-display)" }}>Need?</em>
                     </motion.h2>
 
                     <motion.p
@@ -574,32 +652,22 @@ export default function ProductsPage() {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.15 }}
-                        className="text-white/35 text-base md:text-lg mb-12 font-light leading-relaxed"
+                        className="text-brand-text-muted text-lg mb-12 font-light leading-relaxed max-w-2xl mx-auto"
                     >
-                        Our team specializes in custom aluminium solutions. Share your
-                        vision and we&apos;ll bring it to life with precision engineering.
+                        Our team specializes in bespoke aluminium solutions. Share your
+                        vision and we&apos;ll bring it to life with unparalleled precision engineering.
                     </motion.p>
 
                     <motion.button
-                        id="products-cta-enquire"
                         initial={{ opacity: 0, y: 12 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                         onClick={openWhatsApp}
-                        className="group/cta relative inline-flex items-center gap-3 overflow-hidden
-                            border border-brand-gold/40 text-white
-                            px-10 md:px-14 py-4 md:py-5
-                            text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.4em]
-                            transition-all duration-500
-                            hover:border-brand-gold hover:tracking-[0.55em]"
+                        className="group/cta inline-flex items-center gap-4 bg-brand-charcoal text-white px-10 py-5 text-[11px] font-bold uppercase tracking-[0.4em] hover:bg-brand-primary transition-all duration-500"
                     >
-                        <span className="absolute inset-0 bg-brand-gold scale-x-0 origin-left group-hover/cta:scale-x-100 transition-transform duration-500 ease-out" />
-                        <span className="relative z-10">Enquire Now</span>
-                        <ArrowRight
-                            size={14}
-                            className="relative z-10 transition-transform duration-300 group-hover/cta:translate-x-1"
-                        />
+                        Enquire Now
+                        <ArrowRight size={14} className="group-hover/cta:translate-x-1 transition-transform duration-300 text-brand-gold" />
                     </motion.button>
                 </div>
             </section>

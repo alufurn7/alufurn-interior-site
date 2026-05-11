@@ -23,30 +23,37 @@ export default function Outlets() {
             <div className="container mx-auto px-6 md:px-12">
 
                 {/* Header Block */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                    <div>
-                        <motion.span
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
-                            className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold"
-                        >
-                            OUR PRESENCE
-                        </motion.span>
-                        <motion.h2
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-5xl font-semibold text-brand-primary tracking-tight"
-                        >
-                            Domestic Outlets
-                        </motion.h2>
-                    </div>
+                <div className="flex flex-col items-center text-center mb-20 max-w-3xl mx-auto">
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-3 block font-bold"
+                    >
+                        OUR PRESENCE
+                    </motion.span>
+                    {/* Gold draw-in line */}
+                    <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "40px" }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="h-px bg-brand-gold mx-auto mt-1 mb-6"
+                    />
+                    <motion.h2
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-semibold text-brand-primary tracking-tight mb-6"
+                    >
+                        Domestic{" "}
+                        <em className="font-light" style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}>Outlets</em>
+                    </motion.h2>
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="max-w-xs text-brand-primary/60 text-sm font-light leading-relaxed"
+                        className="text-brand-primary/60 text-sm md:text-base font-light leading-relaxed"
                     >
                         Experience our craftsmanship firsthand at our exclusive design studios across the country.
                     </motion.p>
@@ -61,7 +68,7 @@ export default function Outlets() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white p-12 h-[350px] flex flex-col justify-between group hover:bg-brand-primary transition-colors duration-700 relative overflow-hidden"
+                            className="bg-white p-12 h-[350px] flex flex-col justify-between group hover:bg-brand-primary transition-colors duration-700 relative overflow-hidden border-t-2 border-brand-gold"
                         >
                             {/* Top Meta Info */}
                             <div className="flex justify-between items-start">

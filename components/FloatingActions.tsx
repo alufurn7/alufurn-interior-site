@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { Mail, Bot, ArrowUp, X } from "lucide-react";
+import { Mail, Bot, ArrowUp, X, MessageSquare } from "lucide-react";
 import dynamic from "next/dynamic";
+import { useQuote } from "./AppWrapper";
 
 const Chatbot = dynamic(() => import("./Chatbot"), { ssr: false });
 
@@ -41,7 +42,8 @@ function useScrollVisibility(debounceMs = 200) {
         };
     }, [handleScroll]);
 
-    const isVisible = pastHero && !isScrolling;
+    // Always show once past hero — don't hide while scrolling (that's the mid-scroll dead zone)
+    const isVisible = pastHero;
     return { isVisible };
 }
 
@@ -75,6 +77,7 @@ const itemVariants: Variants = {
 /* ── Component ── */
 export default function FloatingActions() {
     const { isVisible } = useScrollVisibility();
+    const { openQuote } = useQuote();
     const [tooltipId, setTooltipId] = useState<string | null>(null);
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
@@ -106,6 +109,8 @@ export default function FloatingActions() {
         setIsChatOpen(prev => !prev);
     }, []);
 
+
+
     const fabItems = [
         {
             id: "fab-mail",
@@ -113,7 +118,7 @@ export default function FloatingActions() {
             icon: <Mail className="w-5 h-5" />,
             ariaLabel: "Send us an email",
             onClick: openMail,
-            className: "bg-brand-primary text-white hover:bg-brand-primary-deep shadow-[0_4px_20px_rgba(30,71,60,0.35)]",
+            className: "bg-[#C8A96A] text-white hover:bg-[#A6894B] shadow-[0_4px_20px_rgba(200,169,106,0.35)]",
         },
         {
             id: "fab-whatsapp",
@@ -129,22 +134,12 @@ export default function FloatingActions() {
         },
         {
             id: "chat-btn",
-            label: isChatOpen ? "Close Chat" : "AI Chat",
-            icon: isChatOpen ? <X className="w-5 h-5" /> : <Bot className="w-5 h-5" />,
+            label: "AI Chat",
+            icon: <Bot className="w-5 h-5" />,
             ariaLabel: "Toggle AI Chatbot",
             onClick: toggleChat,
-            className: isChatOpen
-                ? "bg-[#25D366] text-white shadow-[0_4px_20px_rgba(37,211,102,0.35)]"
-                : "bg-gray-400 text-white hover:bg-gray-500 shadow-[0_4px_20px_rgba(0,0,0,0.15)]",
-        },
-        {
-            id: "fab-top",
-            label: "Top",
-            icon: <ArrowUp className="w-5 h-5" />,
-            ariaLabel: "Back to top",
-            onClick: scrollToTop,
-            className: "bg-white/90 text-brand-primary border border-brand-border hover:bg-white shadow-[0_4px_20px_rgba(0,0,0,0.10)]",
-        },
+            className: "bg-[#C8A96A] text-white hover:bg-[#A6894B] shadow-[0_4px_20px_rgba(200,169,106,0.35)]",
+        }
     ];
 
     return (
@@ -156,7 +151,7 @@ export default function FloatingActions() {
 
             {/* ── FAB Stack ── */}
             <AnimatePresence>
-                {isVisible && (
+                {isVisible && !isChatOpen && (
                     <motion.div
                         key="fab-stack"
                         variants={containerVariants}
@@ -167,6 +162,32 @@ export default function FloatingActions() {
                         role="group"
                         aria-label="Quick actions"
                     >
+                        {/* ── Enquire Now sticky pill — always on top ── */}
+                        <motion.div
+                            key="enquire-pill"
+                            variants={itemVariants}
+                            className="relative flex items-center"
+                        >
+                            <motion.button
+                                onClick={openQuote}
+                                whileHover={{ scale: 1.04 }}
+                                whileTap={{ scale: 0.96 }}
+                                aria-label="Enquire now"
+                                className="
+                                    flex items-center gap-2
+                                    px-4 py-3 rounded-full
+                                    bg-brand-gold text-white
+                                    text-[11px] font-bold uppercase tracking-[0.18em]
+                                    shadow-[0_4px_20px_rgba(184,134,11,0.45)]
+                                    hover:bg-brand-gold-light
+                                    transition-colors duration-300
+                                    cursor-pointer
+                                "
+                            >
+                                <MessageSquare className="w-4 h-4" />
+                                Enquire Now
+                            </motion.button>
+                        </motion.div>
                         {fabItems.map((item) => (
                             <motion.div
                                 key={item.id}
@@ -210,6 +231,63 @@ export default function FloatingActions() {
                                 </motion.button>
                             </motion.div>
                         ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* ── FAB Top (Left Aligned) ── */}
+            <AnimatePresence>
+                {isVisible && (
+                    <motion.div
+                        key="fab-top-container"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className="fixed bottom-6 left-4 md:bottom-8 md:left-8 z-50 flex items-center"
+                        role="group"
+                    >
+                        <motion.div
+                            key="fab-top"
+                            variants={itemVariants}
+                            className="relative flex items-center"
+                            onMouseEnter={() => setTooltipId('fab-top')}
+                            onMouseLeave={() => setTooltipId(null)}
+                        >
+                            {/* Tooltip */}
+                            <AnimatePresence>
+                                {tooltipId === 'fab-top' && (
+                                    <motion.span
+                                        initial={{ opacity: 0, x: -8 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: -8 }}
+                                        transition={{ duration: 0.15 }}
+                                        className="absolute left-full ml-3 whitespace-nowrap rounded-lg bg-gray-900/90 px-3 py-1.5 text-xs font-medium text-white shadow-lg backdrop-blur-sm pointer-events-none select-none"
+                                    >
+                                        Top
+                                    </motion.span>
+                                )}
+                            </AnimatePresence>
+
+                            {/* Button */}
+                            <motion.button
+                                id="fab-top"
+                                onClick={scrollToTop}
+                                aria-label="Back to top"
+                                whileHover={{ scale: 1.12 }}
+                                whileTap={{ scale: 0.92 }}
+                                className="
+                                    flex items-center justify-center
+                                    w-12 h-12 md:w-14 md:h-14
+                                    rounded-full cursor-pointer
+                                    transition-all duration-300
+                                    focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2
+                                    bg-[#C8A96A] text-white hover:bg-[#A6894B] shadow-[0_4px_20px_rgba(200,169,106,0.35)]
+                                "
+                            >
+                                <ArrowUp className="w-5 h-5" />
+                            </motion.button>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>

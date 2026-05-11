@@ -38,7 +38,9 @@ const products = [
 
 const navLinks = [
     { name: "Products", href: "/product" },
-    { name: "Experience Center", href: "/experience" },
+    { name: "Projects", href: "/projects" },
+    { name: "Quality & Mfg", href: "/quality" },
+    { name: "Find a Studio", href: "/experience" },
     { name: "Catalog", href: "/catalog" },
     { name: "Contact", href: "/contact" },
 ];
@@ -93,7 +95,7 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
     }, [mobileMenuOpen]);
 
     /* ── Derived state ── */
-    const isSecondaryPage = ["/contact", "/catalog", "/experience", "/product"].includes(
+    const isSecondaryPage = ["/contact", "/catalog", "/experience", "/product", "/projects", "/quality"].includes(
         pathname
     );
     const isWhiteNavbar = isScrolled || showProductsDropdown || isSecondaryPage;
@@ -108,7 +110,7 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
                 } ${mobileMenuOpen
                     ? "fixed inset-0 h-screen overflow-hidden"
                     : isFixedNavbar
-                        ? "fixed bg-white py-3 md:py-4 shadow-lg"
+                        ? "fixed bg-white py-5 shadow-lg"
                         : isSecondaryPage
                             ? "absolute bg-white py-6 md:py-8"
                             : "absolute bg-transparent py-6 md:py-8"
@@ -156,7 +158,7 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
                         >
                             <Link
                                 href={link.href}
-                                className={`text-xs font-bold uppercase tracking-[0.2em] transition-colors duration-500 ${isWhiteNavbar
+                                className={`text-[15px] font-medium uppercase tracking-[0.12em] transition-colors duration-500 ${isWhiteNavbar
                                     ? "text-brand-primary/70 hover:text-brand-primary"
                                     : "text-white/70 hover:text-white"
                                     }`}

@@ -18,7 +18,7 @@ export default function Consultation() {
     useEffect(() => {
         const timer = setInterval(() => {
             setIndex((prev) => (prev + 1) % words.length);
-        }, 2500);
+        }, 3800);
         return () => clearInterval(timer);
     }, [words.length]);
     return (

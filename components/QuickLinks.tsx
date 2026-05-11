@@ -32,6 +32,34 @@ export default function QuickLinks() {
     return (
         <section className="bg-brand-light py-24 md:py-32">
             <div className="container mx-auto px-6 md:px-12">
+                {/* Header Block */}
+                <div className="flex flex-col items-center text-center mb-20 max-w-3xl mx-auto">
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-3 block font-bold"
+                    >
+                        DISCOVER MORE
+                    </motion.span>
+                    {/* Gold draw-in line */}
+                    <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "40px" }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="h-px bg-brand-gold mx-auto mt-1 mb-6"
+                    />
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-semibold text-brand-primary tracking-tight mb-2"
+                    >
+                        Continue <em className="font-light" style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}>Exploring</em>
+                    </motion.h2>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {links.map((link, index) => (
                         <motion.div
