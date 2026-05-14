@@ -167,8 +167,69 @@ export default function AluminiumPanelsPage() {
                 </div>
             </div>
 
-            {/* ── Section 1: Why Aluminium Panels ── */}
+            {/* ── Section 1: Panel Range ── */}
             <section className="py-24 md:py-32 bg-white">
+                <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-10"
+                    >
+                        <span className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold">Panel Systems</span>
+                        <div className="h-px w-10 bg-brand-gold mx-auto mb-6" />
+                        <h2 className="text-3xl md:text-5xl font-bold text-brand-primary tracking-tighter uppercase leading-tight mb-4">
+                            Our Aluminium Panel Range —{" "}
+                            <em className="font-light" style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}>
+                                Interior, Exterior & Ceiling
+                            </em>
+                        </h2>
+                        <p className="text-brand-primary/60 text-sm md:text-base font-light max-w-xl mx-auto">
+                            Three primary aluminium panel systems, each engineered for specific applications. All manufactured at our in-house facility and available in custom sizes and finishes.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        {panelRange.map((item, i) => (
+                            <motion.div
+                                key={item.name}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-60px" }}
+                                transition={{ duration: 0.6, delay: i * 0.1 }}
+                                className="group cursor-pointer"
+                            >
+                                {/* Image */}
+                                <div className="relative aspect-[3/2] overflow-hidden mb-5 bg-brand-light">
+                                    <Image
+                                        src={item.image}
+                                        alt={`ALUFURN ${item.name} aluminium panel India`}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/20 transition-colors duration-500" />
+                                    <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                                        <div className="bg-brand-primary/90 backdrop-blur-sm px-5 py-3">
+                                            <span className="text-white text-[10px] font-semibold uppercase tracking-[0.3em]">View Details</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Info */}
+                                <h3 className="text-sm md:text-base font-bold text-brand-primary uppercase tracking-wide mb-1 group-hover:text-brand-gold transition-colors duration-300">
+                                    {item.name}
+                                </h3>
+                                <p className="text-[11px] md:text-xs text-brand-text-muted font-light tracking-wider uppercase">
+                                    {item.type}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Section 2: Why Aluminium Panels ── */}
+            <section className="py-24 md:py-32 bg-[#f4f4f4]">
                 <div className="container mx-auto px-6 md:px-12 max-w-6xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
@@ -222,59 +283,6 @@ export default function AluminiumPanelsPage() {
                 </div>
             </section>
 
-            {/* ── Section 2: Panel Range ── */}
-            <section className="py-24 md:py-32 bg-[#f4f4f4]">
-                <div className="container mx-auto px-6 md:px-12 max-w-6xl">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-16"
-                    >
-                        <span className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold">Panel Systems</span>
-                        <div className="h-px w-10 bg-brand-gold mx-auto mb-6" />
-                        <h2 className="text-3xl md:text-5xl font-bold text-brand-primary tracking-tighter uppercase leading-tight mb-4">
-                            Our Aluminium Panel Range —{" "}
-                            <em className="font-light" style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}>
-                                Interior, Exterior & Ceiling
-                            </em>
-                        </h2>
-                        <p className="text-brand-primary/60 text-sm md:text-base font-light max-w-xl mx-auto">
-                            Three primary aluminium panel systems, each engineered for specific applications. All manufactured at our in-house facility and available in custom sizes and finishes.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {panelRange.map((item, i) => (
-                            <motion.div
-                                key={item.name}
-                                initial={{ opacity: 0, y: 24 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: i * 0.1 }}
-                                className="group relative overflow-hidden bg-white"
-                            >
-                                <div className="relative h-80 overflow-hidden">
-                                    <Image
-                                        src={item.image}
-                                        alt={`ALUFURN ${item.name} aluminium panel India`}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                                </div>
-                                <div className="p-6">
-                                    <p className="text-brand-gold text-[9px] uppercase tracking-[0.4em] font-bold mb-1">{item.type}</p>
-                                    <h3 className="text-brand-primary font-bold text-lg uppercase tracking-tight mb-2">{item.name}</h3>
-                                    <p className="text-brand-primary/60 text-sm font-light leading-relaxed">{item.desc}</p>
-                                </div>
-                                <div className="absolute bottom-0 left-0 h-[2px] bg-brand-gold w-0 group-hover:w-full transition-all duration-700 ease-out" />
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* ── Section 3: Process ── */}
             <section className="py-24 md:py-32 bg-brand-charcoal text-white">

@@ -32,12 +32,12 @@ const products = [
     { name: "Aluminium Kitchen", image: "/images/kitchen_01.webp", href: "/aluminium-kitchen" },
     { name: "Aluminium Doors", image: "/images/pivot-grand.webp", href: "/aluminium-doors" },
     { name: "Aluminium Panels", image: "/images/wallpanel_01.webp", href: "/aluminium-panels" },
-    { name: "Wardrobe Solutions", image: "/images/hinged-classic.webp", href: "/product#wardrobe" },
-    { name: "Vanity Units", image: "/images/double-basin.webp", href: "/product#vanity" },
+    { name: "Wardrobe Solutions", image: "/images/hinged-classic.webp", href: "/wardrobe" },
+    { name: "Vanity Units", image: "/images/double-basin.webp", href: "/vanity" },
 ];
 
 const navLinks = [
-    { name: "Products", href: "/product" },
+    { name: "Products", href: "/aluminium-kitchen" },
     { name: "Projects", href: "/projects" },
     { name: "Quality & Mfg", href: "/quality" },
     { name: "Find a Studio", href: "/experience" },

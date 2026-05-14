@@ -179,9 +179,70 @@ export default function AluminiumDoorsPage() {
                 </div>
             </div>
 
-            {/* ── Section 1: Why Aluminium ── */}
-            <section className="py-24 md:py-32 bg-white">
-                <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+            {/* ── Section 1: Door Range ── */}
+            <section className="py-14 md:py-20 bg-white">
+                <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-10"
+                    >
+                        <span className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold">Our Door Systems</span>
+                        <div className="h-px w-10 bg-brand-gold mx-auto mb-6" />
+                        <h2 className="text-3xl md:text-5xl font-bold text-brand-primary tracking-tighter uppercase leading-tight mb-4">
+                            ALUFURN Door Range —{" "}
+                            <em className="font-light" style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}>
+                                Pivot to Flush Panel
+                            </em>
+                        </h2>
+                        <p className="text-brand-primary/60 text-sm md:text-base font-light max-w-xl mx-auto">
+                            Five distinct aluminium door systems, each engineered for specific architectural applications. Every door custom-made to your exact dimensions.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {doorRange.map((item, i) => (
+                            <motion.div
+                                key={item.name}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-60px" }}
+                                transition={{ duration: 0.6, delay: i * 0.1 }}
+                                className="group cursor-pointer"
+                            >
+                                {/* Image */}
+                                <div className="relative aspect-[3/2] overflow-hidden mb-5 bg-brand-light">
+                                    <Image
+                                        src={item.image}
+                                        alt={`ALUFURN ${item.name} aluminium interior door India`}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/20 transition-colors duration-500" />
+                                    <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                                        <div className="bg-brand-primary/90 backdrop-blur-sm px-5 py-3">
+                                            <span className="text-white text-[10px] font-semibold uppercase tracking-[0.3em]">View Details</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Info */}
+                                <h3 className="text-sm md:text-base font-bold text-brand-primary uppercase tracking-wide mb-1 group-hover:text-brand-gold transition-colors duration-300">
+                                    {item.name}
+                                </h3>
+                                <p className="text-[11px] md:text-xs text-brand-text-muted font-light tracking-wider uppercase">
+                                    {item.system}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Section 2: Why Aluminium ── */}
+            <section className="py-14 md:py-20 bg-[#f4f4f4]">
+                <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
@@ -235,63 +296,10 @@ export default function AluminiumDoorsPage() {
                 </div>
             </section>
 
-            {/* ── Section 2: Door Range ── */}
-            <section className="py-24 md:py-32 bg-[#f4f4f4]">
-                <div className="container mx-auto px-6 md:px-12 max-w-6xl">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-16"
-                    >
-                        <span className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold">Our Door Systems</span>
-                        <div className="h-px w-10 bg-brand-gold mx-auto mb-6" />
-                        <h2 className="text-3xl md:text-5xl font-bold text-brand-primary tracking-tighter uppercase leading-tight mb-4">
-                            ALUFURN Door Range —{" "}
-                            <em className="font-light" style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}>
-                                Pivot to Flush Panel
-                            </em>
-                        </h2>
-                        <p className="text-brand-primary/60 text-sm md:text-base font-light max-w-xl mx-auto">
-                            Five distinct aluminium door systems, each engineered for specific architectural applications. Every door custom-made to your exact dimensions.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {doorRange.map((item, i) => (
-                            <motion.div
-                                key={item.name}
-                                initial={{ opacity: 0, y: 24 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: i * 0.07 }}
-                                className="group relative overflow-hidden bg-white"
-                            >
-                                <div className="relative h-72 overflow-hidden">
-                                    <Image
-                                        src={item.image}
-                                        alt={`ALUFURN ${item.name} aluminium interior door India`}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                                </div>
-                                <div className="p-6">
-                                    <p className="text-brand-gold text-[9px] uppercase tracking-[0.4em] font-bold mb-1">{item.system}</p>
-                                    <h3 className="text-brand-primary font-bold text-lg uppercase tracking-tight mb-2">{item.name}</h3>
-                                    <p className="text-brand-primary/60 text-sm font-light leading-relaxed">{item.desc}</p>
-                                </div>
-                                <div className="absolute bottom-0 left-0 h-[2px] bg-brand-gold w-0 group-hover:w-full transition-all duration-700 ease-out" />
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* ── Section 3: Manufacturing / Projects ── */}
-            <section className="py-24 md:py-32 bg-brand-charcoal text-white">
-                <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+            <section className="py-14 md:py-20 bg-brand-charcoal text-white">
+                <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
