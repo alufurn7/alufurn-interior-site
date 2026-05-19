@@ -63,10 +63,24 @@ const contactInfo = [
     },
     {
         icon: MapPin,
-        label: "Our Studio",
-        primary: "G-15, Shashi Complex Exhibition Road",
-        secondary: "Patna, Bihar, India - 800001",
+        label: "Patna Studio (HQ)",
+        primary: "G-15, Shashi Complex",
+        secondary: "Exhibition Road, Patna",
         href: "https://maps.app.goo.gl/9CuuLSiMVcXLk3rY6",
+    },
+    {
+        icon: MapPin,
+        label: "Jaipur Studio",
+        primary: "131-132 Main Niwaru Road",
+        secondary: "Jhotwara Industrial Area, Jaipur",
+        href: undefined,
+    },
+    {
+        icon: MapPin,
+        label: "Calicut Studio",
+        primary: "42/1680 Kunnummal Nallalam",
+        secondary: "Behind Industrial Estate, Calicut",
+        href: undefined,
     },
     {
         icon: Clock,

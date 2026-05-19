@@ -32,6 +32,15 @@ const nextConfig: NextConfig = {
             },
         ];
     },
+    async redirects() {
+        return [
+            {
+                source: '/product',
+                destination: '/aluminium-kitchen',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;

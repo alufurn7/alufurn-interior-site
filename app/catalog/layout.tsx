@@ -13,13 +13,13 @@ const jsonLd = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://alufurn.com/"
+      "item": "https://www.alufurn.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Catalog",
-      "item": "https://alufurn.com/catalog"
+      "item": "https://www.alufurn.com/catalog"
     }
   ]
 };

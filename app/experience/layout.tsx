@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description:
         "Visit ALUFURN's experience centres in Patna, Jaipur & Calicut. See aluminium modular kitchens, doors, and panels live. Book a showroom visit today.",
     alternates: {
-        canonical: "https://alufurn.com/experience",
+        canonical: "https://www.alufurn.com/experience",
     },
 };
 
@@ -14,13 +14,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://alufurn.com/#location-patna",
+      "@id": "https://www.alufurn.com/#location-patna",
       "name": "ALUFURN Experience Centre — Patna",
       "description": "ALUFURN aluminium interiors showroom in Patna. Displaying aluminium modular kitchens, wardrobes, interior doors, and custom panels.",
-      "url": "https://alufurn.com/experience",
+      "url": "https://www.alufurn.com/experience",
       "telephone": "+91-7763970474",
       "email": "enquiries@alufurn.com",
-      "image": "https://alufurn.com/images/experience_1.webp",
+      "image": "https://www.alufurn.com/images/experience_1.webp",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "G-15, Shashi Complex, Exhibition Road",
@@ -44,11 +44,11 @@ const jsonLd = {
         }
       ],
       "priceRange": "₹₹₹",
-      "parentOrganization": { "@id": "https://alufurn.com/#organization" }
+      "parentOrganization": { "@id": "https://www.alufurn.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://alufurn.com/#location-jaipur",
+      "@id": "https://www.alufurn.com/#location-jaipur",
       "name": "ALUFURN Experience Centre — Jaipur",
       "telephone": "+91-9776397047",
       "email": "enquiries@alufurn.com",
@@ -68,11 +68,11 @@ const jsonLd = {
         }
       ],
       "priceRange": "₹₹₹",
-      "parentOrganization": { "@id": "https://alufurn.com/#organization" }
+      "parentOrganization": { "@id": "https://www.alufurn.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://alufurn.com/#location-calicut",
+      "@id": "https://www.alufurn.com/#location-calicut",
       "name": "ALUFURN Experience Centre — Calicut",
       "telephone": "+91-9776397047",
       "email": "enquiries@alufurn.com",
@@ -92,13 +92,13 @@ const jsonLd = {
         }
       ],
       "priceRange": "₹₹₹",
-      "parentOrganization": { "@id": "https://alufurn.com/#organization" }
+      "parentOrganization": { "@id": "https://www.alufurn.com/#organization" }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alufurn.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Experience Centres", "item": "https://alufurn.com/experience" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alufurn.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Experience Centres", "item": "https://www.alufurn.com/experience" }
       ]
     }
   ]

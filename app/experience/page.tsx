@@ -339,23 +339,27 @@ export default function ExperienceCenter() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+                        {/* Patna */}
                         <div>
-                            <p className="text-[10px] uppercase tracking-widest font-bold text-brand-primary/40 mb-4">Location Details</p>
-                            <h3 className="text-2xl font-bold text-brand-primary mb-4 uppercase tracking-widest">Visit our Showroom</h3>
-                            <p className="text-lg font-medium text-brand-primary leading-relaxed">G-15, Shashi Complex Exhibition Road<br />Patna, Bihar, India - 800001</p>
+                            <h3 className="text-xl font-bold text-brand-primary mb-4 uppercase tracking-widest">Patna Studio (HQ)</h3>
+                            <p className="text-sm font-medium text-brand-primary leading-relaxed mb-4">G-15, Shashi Complex, Exhibition Road<br />Patna, Bihar, India - 800001</p>
+                            <p className="text-sm text-brand-primary/60 italic mb-1">Mon - Sat: 10:00 AM - 7:00 PM</p>
+                            <p className="text-sm text-brand-primary/60 italic">+91 776 397 0474</p>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                            <div>
-                                <p className="text-[10px] uppercase tracking-widest font-bold text-brand-primary/40 mb-2">Timings</p>
-                                <p className="text-lg font-medium text-brand-primary leading-tight">Mon - Sat: 10:00 AM - 7:00 PM</p>
-                                <p className="text-sm text-brand-primary/60 mt-1 italic">Sunday by Appointment Only</p>
-                            </div>
-                            <div>
-                                <p className="text-[10px] uppercase tracking-widest font-bold text-brand-primary/40 mb-2">Contact</p>
-                                <p className="text-lg font-medium text-brand-primary">+91 776 397 0474</p>
-                                <p className="text-sm text-brand-primary/60 mt-1 italic">enquiries@alufurn.com</p>
-                            </div>
+                        {/* Jaipur */}
+                        <div>
+                            <h3 className="text-xl font-bold text-brand-primary mb-4 uppercase tracking-widest">Jaipur Studio</h3>
+                            <p className="text-sm font-medium text-brand-primary leading-relaxed mb-4">131-132 Main Niwaru Road, Jhotwara Industrial Area<br />Jaipur, Rajasthan, India</p>
+                            <p className="text-sm text-brand-primary/60 italic mb-1">Mon - Sat: 10:00 AM - 7:00 PM</p>
+                            <p className="text-sm text-brand-primary/60 italic">+91 776 397 0474</p>
+                        </div>
+                        {/* Calicut */}
+                        <div>
+                            <h3 className="text-xl font-bold text-brand-primary mb-4 uppercase tracking-widest">Calicut Studio</h3>
+                            <p className="text-sm font-medium text-brand-primary leading-relaxed mb-4">42/1680 Kunnummal Nallalam, Behind Industrial Estate<br />Calicut, Kerala, India</p>
+                            <p className="text-sm text-brand-primary/60 italic mb-1">Mon - Sat: 10:00 AM - 7:00 PM</p>
+                            <p className="text-sm text-brand-primary/60 italic">+91 776 397 0474</p>
                         </div>
                     </div>
                 </div>

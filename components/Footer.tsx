@@ -34,8 +34,8 @@ const LinkedinIcon = ({ size = 18 }: { size?: number }) => (
    ────────────────────────────────────────────── */
 const serviceLinks = [
     { label: "Kitchen Design", href: "/aluminium-kitchen" },
-    { label: "Wardrobe Solutions", href: "/product#wardrobe" },
-    { label: "Vanity Units", href: "/product#vanity" },
+    { label: "Wardrobe Solutions", href: "/aluminium-wardrobe" },
+    { label: "Vanity Units", href: "/aluminium-vanity" },
     { label: "Interior Doors", href: "/aluminium-doors" },
     { label: "Custom Panels", href: "/aluminium-panels" },
 ];
@@ -45,14 +45,15 @@ const companyLinks = [
     { label: "Our Process", href: "/quality" },
     { label: "Experience Center", href: "/experience" },
     { label: "Franchise", href: "/franchise" },
+    { label: "Blog & Insights", href: "/blog" },
 ];
 
 const supportLinks = [
     { label: "Contact Us", href: "/contact" },
     { label: "Catalog Download", href: "/catalog" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "FAQ", href: "/aluminium-kitchen#faq" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "FAQ", href: "#faq" },
 ];
 
 const socialLinks = [
@@ -72,14 +73,14 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-12 mb-12 gap-8">
                     <div className="flex items-center gap-8">
                         <a
-                            href="mailto:hello@alufurn.com"
+                            href="mailto:enquiries@alufurn.com"
                             className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
                         >
                             <Mail size={18} />
                             <span className="text-sm">enquiries@alufurn.com</span>
                         </a>
                         <a
-                            href="tel:+911234567890"
+                            href="tel:+917763970474"
                             className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
                         >
                             <Phone size={18} />

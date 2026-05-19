@@ -3,8 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Projects | ALUFURN",
+    title: "Completed Projects — ALUFURN Aluminium Interiors India",
     description: "Explore our portfolio of premium aluminium interior projects across India — luxury residences, developer fit-outs, and commercial spaces.",
+    alternates: {
+        canonical: "https://www.alufurn.com/projects",
+    },
 };
 
 const projects = [

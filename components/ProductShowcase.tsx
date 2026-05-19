@@ -89,7 +89,7 @@ const extendedProducts = [
         title: "Vanity",
         description: "Aluminium vanity units built for humidity resistance and lasting finish.",
         image: "/images/vanity_01.webp",
-        href: "/product#vanity",
+        href: "/aluminium-vanity",
     },
     {
         eyebrow: "Surfaces",
@@ -160,7 +160,7 @@ export default function ProductShowcase() {
                         title="Wardrobe"
                         description="Intelligently designed wardrobes that combine sophisticated aesthetics with unparalleled organisation — tailored to your space, delivered to the millimetre."
                         image="/images/wardrobe_01.webp"
-                        link="/product#wardrobe"
+                        link="/aluminium-wardrobe"
                         reverse
                     />
                 </div>

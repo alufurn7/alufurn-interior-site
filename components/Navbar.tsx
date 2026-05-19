@@ -32,8 +32,8 @@ const products = [
     { name: "Aluminium Kitchen", image: "/images/kitchen_01.webp", href: "/aluminium-kitchen" },
     { name: "Aluminium Doors", image: "/images/pivot-grand.webp", href: "/aluminium-doors" },
     { name: "Aluminium Panels", image: "/images/wallpanel_01.webp", href: "/aluminium-panels" },
-    { name: "Wardrobe Solutions", image: "/images/hinged-classic.webp", href: "/wardrobe" },
-    { name: "Vanity Units", image: "/images/double-basin.webp", href: "/vanity" },
+    { name: "Wardrobe Solutions", image: "/images/hinged-classic.webp", href: "/aluminium-wardrobe" },
+    { name: "Vanity Units", image: "/images/double-basin.webp", href: "/aluminium-vanity" },
 ];
 
 const navLinks = [
@@ -42,6 +42,7 @@ const navLinks = [
     { name: "Quality & Mfg", href: "/quality" },
     { name: "Find a Studio", href: "/experience" },
     { name: "Catalog", href: "/catalog" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -97,7 +98,7 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
     /* ── Derived state ── */
     const isSecondaryPage = ["/contact", "/catalog", "/experience", "/product", "/projects", "/quality", "/aluminium-kitchen", "/aluminium-doors", "/aluminium-panels"].includes(
         pathname
-    );
+    ) || pathname.startsWith("/blog");
     const isWhiteNavbar = isScrolled || showProductsDropdown || isSecondaryPage;
     const isFixedNavbar =
         isScrolled || showProductsDropdown || (isSecondaryPage && lastScrollY > 10);

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description:
         "India's premium aluminium modular kitchen manufacturer. Waterproof, termite-free, custom-built kitchens. Showrooms in Patna, Jaipur & Calicut. Get a free design quote.",
     alternates: {
-        canonical: "https://alufurn.com/aluminium-kitchen",
+        canonical: "https://www.alufurn.com/aluminium-kitchen",
     },
 };
 
@@ -14,29 +14,29 @@ const jsonLd = {
     "@graph": [
         {
             "@type": "Product",
-            "@id": "https://alufurn.com/aluminium-kitchen#product",
+            "@id": "https://www.alufurn.com/aluminium-kitchen#product",
             "name": "ALUFURN Aluminium Modular Kitchen",
             "description":
                 "Custom aluminium modular kitchens manufactured in India. Waterproof, termite-proof, CNC-machined to 0.1mm accuracy. Available in Linear, Island, U-Shape, L-Shape configurations.",
             "brand": { "@type": "Brand", "name": "ALUFURN" },
             "image": [
-                "https://alufurn.com/images/kitchen_01.webp",
-                "https://alufurn.com/images/linear-series.webp",
-                "https://alufurn.com/images/island-pro.webp",
+                "https://www.alufurn.com/images/kitchen_01.webp",
+                "https://www.alufurn.com/images/linear-series.webp",
+                "https://www.alufurn.com/images/island-pro.webp",
             ],
-            "url": "https://alufurn.com/aluminium-kitchen",
+            "url": "https://www.alufurn.com/aluminium-kitchen",
             "offers": {
                 "@type": "AggregateOffer",
                 "priceCurrency": "INR",
                 "lowPrice": "250000",
                 "highPrice": "1500000",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@id": "https://alufurn.com/#organization" },
+                "seller": { "@id": "https://www.alufurn.com/#organization" },
             },
         },
         {
             "@type": "FAQPage",
-            "url": "https://alufurn.com/aluminium-kitchen",
+            "url": "https://www.alufurn.com/aluminium-kitchen",
             "mainEntity": [
                 {
                     "@type": "Question",
@@ -83,9 +83,9 @@ const jsonLd = {
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alufurn.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alufurn.com/product" },
-                { "@type": "ListItem", "position": 3, "name": "Aluminium Modular Kitchen", "item": "https://alufurn.com/aluminium-kitchen" },
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alufurn.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.alufurn.com/product" },
+                { "@type": "ListItem", "position": 3, "name": "Aluminium Modular Kitchen", "item": "https://www.alufurn.com/aluminium-kitchen" },
             ],
         },
     ],

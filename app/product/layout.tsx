@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description:
         "Explore ALUFURN's complete range of premium aluminium interiors — modular kitchens, wardrobes, vanity units, pivot doors, and custom wall panels. Manufactured in India.",
     alternates: {
-        canonical: "https://alufurn.com/product",
+        canonical: "https://www.alufurn.com/product",
     },
 };
 
@@ -19,13 +19,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://alufurn.com/"
+          "item": "https://www.alufurn.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://alufurn.com/product"
+          "item": "https://www.alufurn.com/product"
         }
       ]
     },
@@ -33,7 +33,7 @@ const jsonLd = {
       "@type": "Product",
       "name": "Luxury Aluminium Modular Kitchen",
       "image": [
-        "https://alufurn.com/images/luxury_bespoke.webp"
+        "https://www.alufurn.com/images/luxury_bespoke.webp"
       ],
       "description": "Exquisite luxury aluminium modular kitchens featuring moisture resistance, seamless finishes, and lifetime durability.",
       "brand": {
