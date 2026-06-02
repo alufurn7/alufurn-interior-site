@@ -40,9 +40,8 @@ const navLinks = [
     { name: "Products", href: "/aluminium-kitchen" },
     { name: "Projects", href: "/projects" },
     { name: "Quality & Mfg", href: "/quality" },
+    { name: "About", href: "/about" },
     { name: "Find a Studio", href: "/experience" },
-    { name: "Catalog", href: "/catalog" },
-    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -96,7 +95,7 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
     }, [mobileMenuOpen]);
 
     /* ── Derived state ── */
-    const isSecondaryPage = ["/contact", "/catalog", "/experience", "/product", "/projects", "/quality", "/aluminium-kitchen", "/aluminium-doors", "/aluminium-panels"].includes(
+    const isSecondaryPage = ["/contact", "/catalog", "/experience", "/product", "/projects", "/quality", "/about", "/aluminium-kitchen", "/aluminium-doors", "/aluminium-panels", "/aluminium-wardrobe", "/aluminium-vanity"].includes(
         pathname
     ) || pathname.startsWith("/blog");
     const isWhiteNavbar = isScrolled || showProductsDropdown || isSecondaryPage;
@@ -298,9 +297,12 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
                                                     </div>
                                                 ))}
                                             </div>
-                                            <button className="w-full mt-6 py-3 border border-brand-primary/10 text-[9px] font-bold uppercase tracking-widest text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-300">
+                                            <Link
+                                                href="/experience"
+                                                className="block w-full mt-6 py-3 border border-brand-primary/10 text-[9px] font-bold uppercase tracking-widest text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-300 text-center"
+                                            >
                                                 View All Locations
-                                            </button>
+                                            </Link>
                                         </div>
                                     </motion.div>
                                 )}
@@ -491,14 +493,14 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
                                 <div className="flex items-center gap-3 text-brand-primary/60">
                                     <MapPin size={16} className="text-brand-gold" />
                                     <span className="text-[10px] uppercase tracking-widest font-bold">
-                                        Gurugram, India
+                                        Patna, Bihar — India
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-3 text-brand-primary/60">
                                     <Phone size={16} className="text-brand-gold" />
-                                    <span className="text-[10px] uppercase tracking-widest font-bold">
-                                        +91 123 456 7890
-                                    </span>
+                                    <a href="tel:+917763970474" className="text-[10px] uppercase tracking-widest font-bold hover:text-brand-gold transition-colors">
+                                        +91 776 397 0474
+                                    </a>
                                 </div>
                                 <p className="text-[9px] uppercase tracking-[0.3em] text-brand-primary/20 mt-2">
                                     © 2026 ALUFURN. Precision Engineered.

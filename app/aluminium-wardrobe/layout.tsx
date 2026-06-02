@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Aluminium Wardrobe India — Custom Walk-In & Sliding Wardrobe Manufacturer",
+    title: "Aluminium Wardrobes India — Custom Walk-In & Sliding | Alufurn",
     description:
-        "India's premium aluminium wardrobe manufacturer. Walk-in wardrobes, sliding systems, fitted wardrobes — waterproof, termite-proof, custom-built. Showrooms in Patna, Jaipur & Calicut.",
+        "Custom aluminium wardrobes — walk-in, sliding & fitted systems. Waterproof, termite-proof. Alufurn showrooms in Patna, Jaipur & Calicut. Free design quote.",
     alternates: {
         canonical: "https://www.alufurn.com/aluminium-wardrobe",
     },

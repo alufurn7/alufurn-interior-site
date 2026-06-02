@@ -41,19 +41,18 @@ const serviceLinks = [
 ];
 
 const companyLinks = [
-    { label: "About Us", href: "/quality" },
-    { label: "Our Process", href: "/quality" },
-    { label: "Experience Center", href: "/experience" },
-    { label: "Franchise", href: "/franchise" },
+    { label: "About Alufurn", href: "/about" },
+    { label: "Manufacturing Standards", href: "/quality" },
+    { label: "Our Projects", href: "/projects" },
     { label: "Blog & Insights", href: "/blog" },
 ];
 
 const supportLinks = [
     { label: "Contact Us", href: "/contact" },
+    { label: "Showrooms", href: "/experience" },
     { label: "Catalog Download", href: "/catalog" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "/terms-of-service" },
-    { label: "FAQ", href: "#faq" },
 ];
 
 const socialLinks = [

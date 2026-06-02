@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Aluminium Interior Doors India — Pivot, Flush & Sliding Manufacturer",
+    title: "Aluminium Interior Doors — Pivot, Flush & Sliding | Alufurn",
     description:
-        "Premium aluminium interior doors — pivot, flush & sliding. Custom manufactured in India. Showrooms in Patna, Jaipur & Calicut. Request a free quote from ALUFURN today.",
+        "Premium aluminium pivot, flush & sliding interior doors. Custom manufactured in India by Alufurn. Showrooms in Patna, Jaipur & Calicut. Free quote.",
     alternates: {
         canonical: "https://www.alufurn.com/aluminium-doors",
     },
