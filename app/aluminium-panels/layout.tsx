@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description:
         "Custom aluminium wall panels, facade cladding & interior feature walls. Architectural-grade, unlimited finishes. Manufactured in India. Get a free quote from ALUFURN.",
     alternates: {
-        canonical: "https://www.alufurn.com/aluminium-panels",
+        canonical: "https://alufurn.com/aluminium-panels",
     },
 };
 
@@ -14,28 +14,28 @@ const jsonLd = {
     "@graph": [
         {
             "@type": "Product",
-            "@id": "https://www.alufurn.com/aluminium-panels#product",
+            "@id": "https://alufurn.com/aluminium-panels#product",
             "name": "ALUFURN Custom Aluminium Wall Panels",
             "description":
                 "Architectural-grade custom aluminium wall panels, facade cladding, and ceiling systems. CNC-manufactured in India for interior and exterior applications. Unlimited finishes.",
             "brand": { "@type": "Brand", "name": "ALUFURN" },
             "image": [
-                "https://www.alufurn.com/images/wallpanel_01.webp",
-                "https://www.alufurn.com/images/facade-system.webp",
-                "https://www.alufurn.com/images/feature-wall.webp",
+                "https://alufurn.com/images/wallpanel_01.webp",
+                "https://alufurn.com/images/facade-system.webp",
+                "https://alufurn.com/images/feature-wall.webp",
             ],
-            "url": "https://www.alufurn.com/aluminium-panels",
+            "url": "https://alufurn.com/aluminium-panels",
             "offers": {
                 "@type": "AggregateOffer",
                 "priceCurrency": "INR",
                 "lowPrice": "350",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@id": "https://www.alufurn.com/#organization" },
+                "seller": { "@id": "https://alufurn.com/#organization" },
             },
         },
         {
             "@type": "FAQPage",
-            "url": "https://www.alufurn.com/aluminium-panels",
+            "url": "https://alufurn.com/aluminium-panels",
             "mainEntity": [
                 {
                     "@type": "Question",
@@ -82,9 +82,9 @@ const jsonLd = {
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alufurn.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.alufurn.com/product" },
-                { "@type": "ListItem", "position": 3, "name": "Aluminium Wall Panels", "item": "https://www.alufurn.com/aluminium-panels" },
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alufurn.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alufurn.com/product" },
+                { "@type": "ListItem", "position": 3, "name": "Aluminium Wall Panels", "item": "https://alufurn.com/aluminium-panels" },
             ],
         },
     ],

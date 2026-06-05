@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Quality & Manufacturing Standards — ALUFURN India",
     description: "Learn about ALUFURN's precision manufacturing — 0.1mm CNC accuracy, 100% automated production lines, E0 formaldehyde standard compliance. India's premier aluminium interior manufacturer.",
     alternates: {
-        canonical: "https://www.alufurn.com/quality",
+        canonical: "https://alufurn.com/quality",
     },
 };
 

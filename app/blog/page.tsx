@@ -7,15 +7,15 @@ export const metadata = {
   title: 'Aluminium Kitchen & Interior Design Blog — ALUFURN India',
   description: 'Expert insights, cost guides, and trends for aluminium modular kitchens, wardrobes, doors, and interiors in India. Straight from the ALUFURN design team.',
   alternates: {
-    canonical: 'https://www.alufurn.com/blog',
+    canonical: 'https://alufurn.com/blog',
   },
   openGraph: {
     type: 'website',
-    url: 'https://www.alufurn.com/blog',
+    url: 'https://alufurn.com/blog',
     title: 'Aluminium Kitchen & Interior Design Blog — ALUFURN India',
     description: 'Expert insights, cost guides, and trends for aluminium modular kitchens, wardrobes, and interiors in India.',
     siteName: 'ALUFURN',
-    images: [{ url: 'https://www.alufurn.com/images/og-image.jpg', width: 1200, height: 630, alt: 'ALUFURN Blog' }],
+    images: [{ url: 'https://alufurn.com/images/og-image.jpg', width: 1200, height: 630, alt: 'ALUFURN Blog' }],
   },
 };
 

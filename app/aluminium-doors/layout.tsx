@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description:
         "Premium aluminium pivot, flush & sliding interior doors. Custom manufactured in India by Alufurn. Showrooms in Patna, Jaipur & Calicut. Free quote.",
     alternates: {
-        canonical: "https://www.alufurn.com/aluminium-doors",
+        canonical: "https://alufurn.com/aluminium-doors",
     },
 };
 
@@ -14,29 +14,29 @@ const jsonLd = {
     "@graph": [
         {
             "@type": "Product",
-            "@id": "https://www.alufurn.com/aluminium-doors#product",
+            "@id": "https://alufurn.com/aluminium-doors#product",
             "name": "ALUFURN Aluminium Interior Doors",
             "description":
                 "Custom aluminium interior doors — pivot, flush panel, sliding barn, glass divide and hidden door systems. Manufactured in India with German-standard hardware.",
             "brand": { "@type": "Brand", "name": "ALUFURN" },
             "image": [
-                "https://www.alufurn.com/images/door_01.webp",
-                "https://www.alufurn.com/images/pivot-grand.webp",
-                "https://www.alufurn.com/images/flush-panel.webp",
+                "https://alufurn.com/images/door_01.webp",
+                "https://alufurn.com/images/pivot-grand.webp",
+                "https://alufurn.com/images/flush-panel.webp",
             ],
-            "url": "https://www.alufurn.com/aluminium-doors",
+            "url": "https://alufurn.com/aluminium-doors",
             "offers": {
                 "@type": "AggregateOffer",
                 "priceCurrency": "INR",
                 "lowPrice": "18000",
                 "highPrice": "300000",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@id": "https://www.alufurn.com/#organization" },
+                "seller": { "@id": "https://alufurn.com/#organization" },
             },
         },
         {
             "@type": "FAQPage",
-            "url": "https://www.alufurn.com/aluminium-doors",
+            "url": "https://alufurn.com/aluminium-doors",
             "mainEntity": [
                 {
                     "@type": "Question",
@@ -83,9 +83,9 @@ const jsonLd = {
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alufurn.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.alufurn.com/product" },
-                { "@type": "ListItem", "position": 3, "name": "Aluminium Interior Doors", "item": "https://www.alufurn.com/aluminium-doors" },
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alufurn.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alufurn.com/product" },
+                { "@type": "ListItem", "position": 3, "name": "Aluminium Interior Doors", "item": "https://alufurn.com/aluminium-doors" },
             ],
         },
     ],

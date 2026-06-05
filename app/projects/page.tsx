@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Completed Projects — ALUFURN Aluminium Interiors India",
     description: "Explore our portfolio of premium aluminium interior projects across India — luxury residences, developer fit-outs, and commercial spaces.",
     alternates: {
-        canonical: "https://www.alufurn.com/projects",
+        canonical: "https://alufurn.com/projects",
     },
 };
 

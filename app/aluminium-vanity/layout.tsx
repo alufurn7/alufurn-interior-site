@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description:
         "India's premium aluminium bathroom vanity manufacturer. Floating vanities, double basins, mirror cabinets — waterproof, mould-proof, custom-built. Showrooms in Patna, Jaipur & Calicut.",
     alternates: {
-        canonical: "https://www.alufurn.com/aluminium-vanity",
+        canonical: "https://alufurn.com/aluminium-vanity",
     },
 };
 
@@ -14,19 +14,19 @@ const jsonLd = {
     "@graph": [
         {
             "@type": "Product",
-            "@id": "https://www.alufurn.com/aluminium-vanity#product",
+            "@id": "https://alufurn.com/aluminium-vanity#product",
             "name": "ALUFURN Aluminium Bathroom Vanity",
             "description":
                 "Custom aluminium bathroom vanity units manufactured in India. Floating, freestanding, and fitted systems — 100% waterproof, mould-resistant.",
             "brand": { "@type": "Brand", "name": "ALUFURN" },
-            "image": ["https://www.alufurn.com/images/floating-vanity.webp", "https://www.alufurn.com/images/double-basin.webp"],
-            "url": "https://www.alufurn.com/aluminium-vanity",
+            "image": ["https://alufurn.com/images/floating-vanity.webp", "https://alufurn.com/images/double-basin.webp"],
+            "url": "https://alufurn.com/aluminium-vanity",
         },
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alufurn.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Vanity Units", "item": "https://www.alufurn.com/aluminium-vanity" },
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alufurn.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Vanity Units", "item": "https://alufurn.com/aluminium-vanity" },
             ],
         },
     ],

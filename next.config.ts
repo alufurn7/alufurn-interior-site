@@ -34,6 +34,14 @@ const nextConfig: NextConfig = {
     },
     async redirects() {
         return [
+            // www → non-www canonical redirect (301 permanent)
+            {
+                source: '/:path*',
+                has: [{ type: 'host', value: 'www.alufurn.com' }],
+                destination: 'https://alufurn.com/:path*',
+                permanent: true,
+            },
+            // Legacy /product route → aluminium-kitchen
             {
                 source: '/product',
                 destination: '/aluminium-kitchen',

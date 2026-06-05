@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.alufurn.com/sitemap.xml',
+    sitemap: 'https://alufurn.com/sitemap.xml',
+    host: 'https://alufurn.com',
   };
 }

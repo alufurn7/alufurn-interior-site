@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description:
         "Custom aluminium wardrobes — walk-in, sliding & fitted systems. Waterproof, termite-proof. Alufurn showrooms in Patna, Jaipur & Calicut. Free design quote.",
     alternates: {
-        canonical: "https://www.alufurn.com/aluminium-wardrobe",
+        canonical: "https://alufurn.com/aluminium-wardrobe",
     },
 };
 
@@ -14,25 +14,25 @@ const jsonLd = {
     "@graph": [
         {
             "@type": "Product",
-            "@id": "https://www.alufurn.com/aluminium-wardrobe#product",
+            "@id": "https://alufurn.com/aluminium-wardrobe#product",
             "name": "ALUFURN Aluminium Wardrobe",
             "description":
                 "Custom aluminium wardrobes manufactured in India. Walk-in, sliding, hinged and fitted systems — waterproof, termite-proof, CNC-machined to 0.1mm accuracy.",
             "brand": { "@type": "Brand", "name": "ALUFURN" },
-            "image": ["https://www.alufurn.com/images/walk-in-elite.webp", "https://www.alufurn.com/images/sliding-luxe.webp"],
-            "url": "https://www.alufurn.com/aluminium-wardrobe",
+            "image": ["https://alufurn.com/images/walk-in-elite.webp", "https://alufurn.com/images/sliding-luxe.webp"],
+            "url": "https://alufurn.com/aluminium-wardrobe",
             "offers": {
                 "@type": "AggregateOffer",
                 "priceCurrency": "INR",
                 "lowPrice": "45000",
                 "highPrice": "800000",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@id": "https://www.alufurn.com/#organization" },
+                "seller": { "@id": "https://alufurn.com/#organization" },
             },
         },
         {
             "@type": "FAQPage",
-            "url": "https://www.alufurn.com/aluminium-wardrobe",
+            "url": "https://alufurn.com/aluminium-wardrobe",
             "mainEntity": [
                 {
                     "@type": "Question",
@@ -55,8 +55,8 @@ const jsonLd = {
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alufurn.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Wardrobe Solutions", "item": "https://www.alufurn.com/aluminium-wardrobe" },
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alufurn.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Wardrobe Solutions", "item": "https://alufurn.com/aluminium-wardrobe" },
             ],
         },
     ],

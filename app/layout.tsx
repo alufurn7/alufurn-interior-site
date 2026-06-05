@@ -21,6 +21,7 @@ const playfair = Playfair_Display({
 
 /* ── Metadata ── */
 export const metadata: Metadata = {
+    metadataBase: new URL('https://alufurn.com'),
     title: {
         default: "Alufurn | Aluminium Modular Kitchens, Doors & Panels India",
         template: "%s | Alufurn",
@@ -28,19 +29,19 @@ export const metadata: Metadata = {
     description:
         "India's leading aluminium interior manufacturer. Custom modular kitchens, doors, wardrobes & wall panels. Showrooms in Patna, Jaipur & Calicut. Free design consultation.",
     alternates: {
-        canonical: "https://www.alufurn.com/",
+        canonical: "https://alufurn.com/",
     },
     openGraph: {
         type: "website",
         locale: "en_IN",
-        url: "https://www.alufurn.com/",
+        url: "https://alufurn.com/",
         siteName: "ALUFURN",
         title: "ALUFURN | Premium Aluminium Modular Kitchens, Doors & Panels — India",
         description:
             "India's leading aluminium interior manufacturer. Custom aluminium modular kitchens, doors, wardrobes & wall panels. Showrooms in Patna, Jaipur & Calicut.",
         images: [
             {
-                url: "https://www.alufurn.com/images/og-image.jpg",
+                url: "https://alufurn.com/images/og-image.jpg",
                 width: 1200,
                 height: 630,
                 alt: "ALUFURN — Premium Aluminium Interiors India",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
         title: "ALUFURN | Premium Aluminium Interiors India",
         description:
             "India's leading aluminium interior manufacturer — kitchens, wardrobes, doors & wall panels. Showrooms in Patna, Jaipur & Calicut.",
-        images: ["https://www.alufurn.com/images/og-image.jpg"],
+        images: ["https://alufurn.com/images/og-image.jpg"],
     },
 };
 
@@ -61,32 +62,32 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://www.alufurn.com/#website",
-      "url": "https://www.alufurn.com/",
+      "@id": "https://alufurn.com/#website",
+      "url": "https://alufurn.com/",
       "name": "Alufurn",
       "alternateName": "ALUFURN",
       "description": "Premium Aluminium Modular Kitchens, Doors & Panels — India",
       "publisher": {
-        "@id": "https://www.alufurn.com/#organization"
+        "@id": "https://alufurn.com/#organization"
       },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://www.alufurn.com/blog?q={search_term_string}"
+          "urlTemplate": "https://alufurn.com/blog?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
     },
     {
       "@type": "Organization",
-      "@id": "https://www.alufurn.com/#organization",
+      "@id": "https://alufurn.com/#organization",
       "name": "Alufurn",
       "alternateName": "ALUFURN",
-      "url": "https://www.alufurn.com/",
+      "url": "https://alufurn.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.alufurn.com/logo_green.png",
+        "url": "https://alufurn.com/logo_green.png",
         "width": 240,
         "height": 80
       },
@@ -106,12 +107,12 @@ const jsonLd = {
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.alufurn.com/#store-patna",
+      "@id": "https://alufurn.com/#store-patna",
       "name": "ALUFURN Experience Centre Patna",
-      "image": "https://www.alufurn.com/images/studio-patna.jpg",
+      "image": "https://alufurn.com/images/studio-patna.jpg",
       "telephone": "+91-7763970474",
       "email": "enquiries@alufurn.com",
-      "url": "https://www.alufurn.com/experience",
+      "url": "https://alufurn.com/experience",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "G-15, Shashi Complex, Exhibition Road",
@@ -129,12 +130,12 @@ const jsonLd = {
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.alufurn.com/#store-jaipur",
+      "@id": "https://alufurn.com/#store-jaipur",
       "name": "Alufurn Experience Centre Jaipur",
-      "image": "https://www.alufurn.com/images/studio-jaipur.jpg",
+      "image": "https://alufurn.com/images/studio-jaipur.jpg",
       "telephone": "+91-9776397047",
       "email": "enquiries@alufurn.com",
-      "url": "https://www.alufurn.com/experience",
+      "url": "https://alufurn.com/experience",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "131-132, Main Niwaru Road, Jhotwara Industrial Area",
@@ -154,16 +155,16 @@ const jsonLd = {
         "closes": "19:00"
       },
       "priceRange": "₹₹₹",
-      "parentOrganization": { "@id": "https://www.alufurn.com/#organization" }
+      "parentOrganization": { "@id": "https://alufurn.com/#organization" }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.alufurn.com/#store-calicut",
+      "@id": "https://alufurn.com/#store-calicut",
       "name": "Alufurn Experience Centre Calicut",
-      "image": "https://www.alufurn.com/images/studio-calicut.jpg",
+      "image": "https://alufurn.com/images/studio-calicut.jpg",
       "telephone": "+91-9776397047",
       "email": "enquiries@alufurn.com",
-      "url": "https://www.alufurn.com/experience",
+      "url": "https://alufurn.com/experience",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "42/1680 Kunnummal Nallalam, Behind Industrial Estate",
@@ -183,17 +184,17 @@ const jsonLd = {
         "closes": "19:00"
       },
       "priceRange": "₹₹₹",
-      "parentOrganization": { "@id": "https://www.alufurn.com/#organization" }
+      "parentOrganization": { "@id": "https://alufurn.com/#organization" }
     },
     {
       "@type": "Product",
-      "@id": "https://www.alufurn.com/aluminium-kitchen#product",
+      "@id": "https://alufurn.com/aluminium-kitchen#product",
       "name": "Aluminium Modular Kitchen",
       "description": "Waterproof & termite-proof aluminium modular kitchens, custom-made to your exact dimensions.",
       "brand": {
-        "@id": "https://www.alufurn.com/#organization"
+        "@id": "https://alufurn.com/#organization"
       },
-      "image": "https://www.alufurn.com/images/products/aluminium-kitchen.jpg",
+      "image": "https://alufurn.com/images/products/aluminium-kitchen.jpg",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "INR",
@@ -204,13 +205,13 @@ const jsonLd = {
     },
     {
       "@type": "Product",
-      "@id": "https://www.alufurn.com/aluminium-doors#product",
+      "@id": "https://alufurn.com/aluminium-doors#product",
       "name": "Aluminium Interior Doors",
       "description": "Custom aluminium interior doors — pivot, flush, barn & sliding. No warping, no maintenance.",
       "brand": {
-        "@id": "https://www.alufurn.com/#organization"
+        "@id": "https://alufurn.com/#organization"
       },
-      "image": "https://www.alufurn.com/images/products/aluminium-doors.jpg",
+      "image": "https://alufurn.com/images/products/aluminium-doors.jpg",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "INR",
@@ -221,13 +222,13 @@ const jsonLd = {
     },
     {
       "@type": "Product",
-      "@id": "https://www.alufurn.com/aluminium-panels#product",
+      "@id": "https://alufurn.com/aluminium-panels#product",
       "name": "Aluminium Wall Panels & Facade Cladding",
       "description": "Architectural aluminium wall panels & facade cladding. Custom CNC patterns, 100+ finishes.",
       "brand": {
-        "@id": "https://www.alufurn.com/#organization"
+        "@id": "https://alufurn.com/#organization"
       },
-      "image": "https://www.alufurn.com/images/products/aluminium-panels.jpg",
+      "image": "https://alufurn.com/images/products/aluminium-panels.jpg",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "INR",
@@ -245,13 +246,13 @@ const jsonLd = {
     },
     {
       "@type": "Product",
-      "@id": "https://www.alufurn.com/aluminium-wardrobe#product",
+      "@id": "https://alufurn.com/aluminium-wardrobe#product",
       "name": "Aluminium Modular Wardrobe",
       "description": "Waterproof & termite-proof aluminium wardrobes. Walk-in, sliding & hinged configurations.",
       "brand": {
-        "@id": "https://www.alufurn.com/#organization"
+        "@id": "https://alufurn.com/#organization"
       },
-      "image": "https://www.alufurn.com/images/products/aluminium-wardrobe.jpg",
+      "image": "https://alufurn.com/images/products/aluminium-wardrobe.jpg",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "INR",
@@ -262,13 +263,13 @@ const jsonLd = {
     },
     {
       "@type": "Product",
-      "@id": "https://www.alufurn.com/aluminium-vanity#product",
+      "@id": "https://alufurn.com/aluminium-vanity#product",
       "name": "Aluminium Bathroom Vanity",
       "description": "100% waterproof aluminium bathroom vanity units. Custom sizes & finishes. Rust-free for life.",
       "brand": {
-        "@id": "https://www.alufurn.com/#organization"
+        "@id": "https://alufurn.com/#organization"
       },
-      "image": "https://www.alufurn.com/images/products/aluminium-vanity.jpg",
+      "image": "https://alufurn.com/images/products/aluminium-vanity.jpg",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "INR",
@@ -279,19 +280,19 @@ const jsonLd = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.alufurn.com/#breadcrumb",
+      "@id": "https://alufurn.com/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.alufurn.com/"
+          "item": "https://alufurn.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://www.alufurn.com/aluminium-kitchen"
+          "item": "https://alufurn.com/aluminium-kitchen"
         }
       ]
     }

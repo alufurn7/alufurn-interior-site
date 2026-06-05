@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getPostSlugs } from '@/lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.alufurn.com';
+  const baseUrl = 'https://alufurn.com';
 
   // Get all blog post slugs
   const slugs = getPostSlugs();

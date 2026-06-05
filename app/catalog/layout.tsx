@@ -5,11 +5,11 @@ export const metadata: Metadata = {
     description:
         "Download the Alufurn product catalog. Explore our full range of aluminium modular kitchens, wardrobes, doors, panels & vanity units. Designs, sizes & finishes included.",
     alternates: {
-        canonical: "https://www.alufurn.com/catalog",
+        canonical: "https://alufurn.com/catalog",
     },
     openGraph: {
         type: "website",
-        url: "https://www.alufurn.com/catalog",
+        url: "https://alufurn.com/catalog",
         title: "Alufurn Product Catalog — Download Aluminium Interiors Catalogue",
         description:
             "Download the complete Alufurn catalog — aluminium kitchens, wardrobes, pivot doors, vanity units and wall panels. All designs, finishes and pricing inside.",
@@ -22,12 +22,12 @@ const jsonLd = {
     "@graph": [
         {
             "@type": "WebPage",
-            "@id": "https://www.alufurn.com/catalog#webpage",
-            "url": "https://www.alufurn.com/catalog",
+            "@id": "https://alufurn.com/catalog#webpage",
+            "url": "https://alufurn.com/catalog",
             "name": "Alufurn Product Catalog",
             "description":
                 "Download the Alufurn product catalog for aluminium modular kitchens, wardrobes, doors, panels and vanity units.",
-            "isPartOf": { "@id": "https://www.alufurn.com/#website" },
+            "isPartOf": { "@id": "https://alufurn.com/#website" },
         },
         {
             "@type": "BreadcrumbList",
@@ -36,13 +36,13 @@ const jsonLd = {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.alufurn.com/"
+                    "item": "https://alufurn.com/"
                 },
                 {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Catalog",
-                    "item": "https://www.alufurn.com/catalog"
+                    "item": "https://alufurn.com/catalog"
                 }
             ]
         }
