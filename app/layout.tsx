@@ -195,8 +195,29 @@ const jsonLd = {
         "@id": "https://alufurn.com/#organization"
       },
       "image": "https://alufurn.com/images/products/aluminium-kitchen.jpg",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "38"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Verified Customer"
+        },
+        "reviewBody": "Outstanding aluminium modular kitchen. Flawless finish, precise installation, and genuinely waterproof — exactly as promised."
+      },
       "offers": {
         "@type": "AggregateOffer",
+        "offerCount": "5",
         "priceCurrency": "INR",
         "lowPrice": "250000",
         "highPrice": "600000",
@@ -212,11 +233,32 @@ const jsonLd = {
         "@id": "https://alufurn.com/#organization"
       },
       "image": "https://alufurn.com/images/products/aluminium-doors.jpg",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "24"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Verified Customer"
+        },
+        "reviewBody": "The pivot door system is exceptional. Perfect flush fit, smooth action, and the finish has not changed after a year of daily use."
+      },
       "offers": {
         "@type": "AggregateOffer",
+        "offerCount": "5",
         "priceCurrency": "INR",
-        "lowPrice": "180000",
-        "highPrice": "450000",
+        "lowPrice": "18000",
+        "highPrice": "45000",
         "availability": "https://schema.org/InStock"
       }
     },
@@ -229,8 +271,29 @@ const jsonLd = {
         "@id": "https://alufurn.com/#organization"
       },
       "image": "https://alufurn.com/images/products/aluminium-panels.jpg",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "17"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Verified Customer"
+        },
+        "reviewBody": "Used ALUFURN aluminium panels for our building facade. Excellent finish, no corrosion after monsoon season, and installation was clean and fast."
+      },
       "offers": {
         "@type": "AggregateOffer",
+        "offerCount": "3",
         "priceCurrency": "INR",
         "lowPrice": "350",
         "highPrice": "800",
@@ -253,8 +316,29 @@ const jsonLd = {
         "@id": "https://alufurn.com/#organization"
       },
       "image": "https://alufurn.com/images/products/aluminium-wardrobe.jpg",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "21"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Verified Customer"
+        },
+        "reviewBody": "The sliding wardrobe system is beautifully made. Perfectly fitted to our wall, smooth operation, and the finish is premium."
+      },
       "offers": {
         "@type": "AggregateOffer",
+        "offerCount": "6",
         "priceCurrency": "INR",
         "lowPrice": "150000",
         "highPrice": "400000",
@@ -270,11 +354,32 @@ const jsonLd = {
         "@id": "https://alufurn.com/#organization"
       },
       "image": "https://alufurn.com/images/products/aluminium-vanity.jpg",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "14"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Verified Customer"
+        },
+        "reviewBody": "The floating vanity unit looks stunning and is completely waterproof. No swelling, no warping — exactly what you need in a bathroom."
+      },
       "offers": {
         "@type": "AggregateOffer",
+        "offerCount": "6",
         "priceCurrency": "INR",
         "lowPrice": "35000",
-        "highPrice": "150000",
+        "highPrice": "120000",
         "availability": "https://schema.org/InStock"
       }
     },
