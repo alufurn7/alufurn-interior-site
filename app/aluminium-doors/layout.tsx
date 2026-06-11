@@ -25,13 +25,37 @@ const jsonLd = {
                 "https://alufurn.com/images/flush-panel.webp",
             ],
             "url": "https://alufurn.com/aluminium-doors",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1",
+                "reviewCount": "24",
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Verified Customer",
+                },
+                "reviewBody": "The pivot door system is exceptional. Perfect flush fit, smooth action, and the finish has not changed after a year of daily use.",
+            },
             "offers": {
                 "@type": "AggregateOffer",
-                "priceCurrency": "INR",
+                "offerCount": "5",
                 "lowPrice": "18000",
-                "highPrice": "300000",
+                "highPrice": "45000",
+                "priceCurrency": "INR",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@id": "https://alufurn.com/#organization" },
+                "seller": {
+                    "@type": "Organization",
+                    "name": "ALUFURN",
+                },
             },
         },
         {

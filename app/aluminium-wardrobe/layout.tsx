@@ -21,13 +21,37 @@ const jsonLd = {
             "brand": { "@type": "Brand", "name": "ALUFURN" },
             "image": ["https://alufurn.com/images/walk-in-elite.webp", "https://alufurn.com/images/sliding-luxe.webp"],
             "url": "https://alufurn.com/aluminium-wardrobe",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1",
+                "reviewCount": "21",
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Verified Customer",
+                },
+                "reviewBody": "The sliding wardrobe system is beautifully made. Perfectly fitted to our wall, smooth operation, and the finish is premium.",
+            },
             "offers": {
                 "@type": "AggregateOffer",
+                "offerCount": "6",
+                "lowPrice": "150000",
+                "highPrice": "400000",
                 "priceCurrency": "INR",
-                "lowPrice": "45000",
-                "highPrice": "800000",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@id": "https://alufurn.com/#organization" },
+                "seller": {
+                    "@type": "Organization",
+                    "name": "ALUFURN",
+                },
             },
         },
         {

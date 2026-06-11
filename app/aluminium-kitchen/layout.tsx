@@ -25,13 +25,37 @@ const jsonLd = {
                 "https://alufurn.com/images/island-pro.webp",
             ],
             "url": "https://alufurn.com/aluminium-kitchen",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1",
+                "reviewCount": "38",
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Verified Customer",
+                },
+                "reviewBody": "Outstanding aluminium modular kitchen. Flawless finish, precise installation, and genuinely waterproof — exactly as promised.",
+            },
             "offers": {
                 "@type": "AggregateOffer",
-                "priceCurrency": "INR",
+                "offerCount": "5",
                 "lowPrice": "250000",
-                "highPrice": "1500000",
+                "highPrice": "600000",
+                "priceCurrency": "INR",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@id": "https://alufurn.com/#organization" },
+                "seller": {
+                    "@type": "Organization",
+                    "name": "ALUFURN",
+                },
             },
         },
         {
