@@ -110,36 +110,51 @@ const sendWhatsAppNotification = async (body: any) => {
 
         console.log("WhatsApp templateParams:", templateParams);
 
-        const payload = {
-            apiKey: process.env.AISENSY_API_KEY,
-            campaignName: "new_lead_full",
-            destination: "917763970474",
-            userName: body.name || "Customer",
-            templateParams,
-            source: "website-form",
-            media: {},
-            buttons: [],
-            carouselCards: [],
-            location: {},
-            attributes: {},
-            paramsFallbackValue: {
-                FirstName: "Customer",
-            },
-        };
+        // List of recipient phone numbers (with country code, e.g., 91XXXXXXXXXX)
+        // Add additional recipient numbers to this array in the future as needed
+        const destinations = [
+            "917763970474",
+            "916202029186"
+            // Add more phone numbers here as needed, e.g.:
+            // "919XXXXXXXXX"
+        ];
 
-        console.log("WhatsApp payload:", JSON.stringify(payload, null, 2));
+        for (const dest of destinations) {
+            try {
+                const payload = {
+                    apiKey: process.env.AISENSY_API_KEY,
+                    campaignName: "new_lead_full",
+                    destination: dest,
+                    userName: body.name || "Customer",
+                    templateParams,
+                    source: "website-form",
+                    media: {},
+                    buttons: [],
+                    carouselCards: [],
+                    location: {},
+                    attributes: {},
+                    paramsFallbackValue: {
+                        FirstName: "Customer",
+                    },
+                };
 
-        const response = await fetch("https://backend.aisensy.com/campaign/t1/api/v2", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-        });
+                console.log(`WhatsApp payload for ${dest}:`, JSON.stringify(payload, null, 2));
 
-        const responseText = await response.text();
-        if (!response.ok) {
-            console.error("AiSensy API Error:", response.status, responseText);
-        } else {
-            console.log("WhatsApp sent successfully:", responseText);
+                const response = await fetch("https://backend.aisensy.com/campaign/t1/api/v2", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload),
+                });
+
+                const responseText = await response.text();
+                if (!response.ok) {
+                    console.error(`AiSensy API Error for ${dest}:`, response.status, responseText);
+                } else {
+                    console.log(`WhatsApp sent successfully to ${dest}:`, responseText);
+                }
+            } catch (destErr) {
+                console.error(`WhatsApp Notification Error for ${dest}:`, destErr);
+            }
         }
     } catch (err) {
         console.error("WhatsApp Notification Error:", err);
