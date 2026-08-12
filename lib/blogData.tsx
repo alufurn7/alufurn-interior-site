@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export type BlogPost = {
     slug: string;
@@ -23,7 +22,7 @@ export const blogPosts: BlogPost[] = [
         content: (
             <>
                 <p className="lead text-lg text-gray-700 mb-8">
-                    When designing a new home or renovating an existing space in India, the kitchen is often the most significant investment. For decades, plywood has been the default material. But as modern Indian homeowners demand higher longevity, zero maintenance, and flawless aesthetics, a new standard has emerged: the <strong>aluminium modular kitchen</strong>. But how does it really compare to plywood? Let's break it down.
+                    When designing a new home or renovating an existing space in India, the kitchen is often the most significant investment. For decades, plywood has been the default material. But as modern Indian homeowners demand higher longevity, zero maintenance, and flawless aesthetics, a new standard has emerged: the <strong>aluminium modular kitchen</strong>. But how does it really compare to plywood? Let&apos;s break it down.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-10 mb-4 text-brand-primary">1. The Truth About Indian Kitchen Environments</h2>
@@ -59,7 +58,7 @@ export const blogPosts: BlogPost[] = [
                 <h2 className="text-2xl font-bold mt-10 mb-4 text-brand-primary">5. Maintenance & Hygiene in Daily Indian Cooking</h2>
                 <p className="mb-4 text-gray-600">
                     Indian cooking uses powerful spices like turmeric, which can permanently stain laminates and edge-banding on plywood. Wood is also porous, absorbing moisture and holding onto musty odours during the rainy season. 
-                    Aluminium, finished with a marine-grade powder coat, is completely non-porous. Oil splatters and spice spills wipe away effortlessly. Because it doesn't absorb water, an aluminium kitchen will never develop that damp, musty smell common in older wooden kitchens.
+                    Aluminium, finished with a marine-grade powder coat, is completely non-porous. Oil splatters and spice spills wipe away effortlessly. Because it doesn&apos;t absorb water, an aluminium kitchen will never develop that damp, musty smell common in older wooden kitchens.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-10 mb-4 text-brand-primary">6. The Verdict: Making the Right Choice for Your Home</h2>
@@ -87,15 +86,15 @@ export const blogPosts: BlogPost[] = [
         content: (
             <>
                 <p className="lead text-lg text-gray-700 mb-8">
-                    One of the first questions homeowners ask when considering a switch to metal interiors is: <em>"What is the actual aluminium modular kitchen price in India?"</em> The truth is, pricing can vary significantly based on your layout, the thickness of the aluminium profiles, the finishes you choose, and the hardware inside. In this 2025 guide, we break down exactly what you are paying for.
+                    One of the first questions homeowners ask when considering a switch to metal interiors is: <em>&quot;What is the actual aluminium modular kitchen price in India?&quot;</em> The truth is, pricing can vary significantly based on your layout, the thickness of the aluminium profiles, the finishes you choose, and the hardware inside. In this 2025 guide, we break down exactly what you are paying for.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-10 mb-4 text-brand-primary">1. Why Pricing Differs Between Aluminium Kitchen Brands</h2>
                 <p className="mb-4 text-gray-600">
-                    Not all aluminium kitchens are created equal. You may find local fabricators offering "aluminium kitchens" at prices lower than cheap plywood. These are often made from thin, low-grade aluminium tubes screwed together manually. Premium brands like <Link href="/aluminium-kitchen" className="text-brand-gold underline hover:text-brand-primary transition-colors">ALUFURN</Link> use heavy-gauge, custom-extruded aluminium profiles that are CNC-machined for absolute precision and structural integrity. The difference in price reflects the difference between a flimsy cabinet and a lifelong architectural installation.
+                    Not all aluminium kitchens are created equal. You may find local fabricators offering &quot;aluminium kitchens&quot; at prices lower than cheap plywood. These are often made from thin, low-grade aluminium tubes screwed together manually. Premium brands like <Link href="/aluminium-kitchen" className="text-brand-gold underline hover:text-brand-primary transition-colors">ALUFURN</Link> use heavy-gauge, custom-extruded aluminium profiles that are CNC-machined for absolute precision and structural integrity. The difference in price reflects the difference between a flimsy cabinet and a lifelong architectural installation.
                 </p>
 
-                <h2 className="text-2xl font-bold mt-10 mb-4 text-brand-primary">2. Cost Breakdown: What You're Actually Paying For</h2>
+                <h2 className="text-2xl font-bold mt-10 mb-4 text-brand-primary">2. Cost Breakdown: What You&apos;re Actually Paying For</h2>
                 <p className="mb-4 text-gray-600">When you receive a quote for an aluminium kitchen, it typically comprises four main elements:</p>
                 <ul className="list-disc pl-6 mb-6 text-gray-600 space-y-2">
                     <li><strong>Carcass (The Inner Frame):</strong> The waterproof structural body of the kitchen.</li>

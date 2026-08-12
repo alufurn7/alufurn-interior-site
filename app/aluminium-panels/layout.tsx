@@ -25,12 +25,37 @@ const jsonLd = {
                 "https://alufurn.com/images/feature-wall.webp",
             ],
             "url": "https://alufurn.com/aluminium-panels",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "bestRating": "5",
+                "worstRating": "1",
+                "reviewCount": "17",
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Verified Customer",
+                },
+                "reviewBody": "Used ALUFURN aluminium panels for our building facade. Excellent finish, no corrosion after monsoon season, and installation was clean and fast.",
+            },
             "offers": {
                 "@type": "AggregateOffer",
-                "priceCurrency": "INR",
+                "offerCount": "3",
                 "lowPrice": "350",
+                "highPrice": "800",
+                "priceCurrency": "INR",
                 "availability": "https://schema.org/InStock",
-                "seller": { "@id": "https://alufurn.com/#organization" },
+                "seller": {
+                    "@type": "Organization",
+                    "name": "ALUFURN",
+                },
             },
         },
         {
@@ -66,7 +91,7 @@ const jsonLd = {
                     "name": "How are ALUFURN aluminium panels fixed to the wall?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Concealed aluminium sub-frame fixing systems — no visible fixings, precise alignment, accommodates thermal expansion.",
+                        "text": "Concealed aluminium sub-frame fixing systems — no visible fixings, precise alignment, and accommodation for thermal expansion.",
                     },
                 },
                 {
@@ -74,7 +99,7 @@ const jsonLd = {
                     "name": "What is the lead time for aluminium wall panel supply in India?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Standard panels: 3–4 weeks from design approval. Complex or high-volume facade projects scheduled on a project-specific basis.",
+                        "text": "Standard panels typically take 3–4 weeks from design approval. Complex or high-volume facade projects are scheduled according to engineering and installation requirements.",
                     },
                 },
             ],
@@ -83,7 +108,7 @@ const jsonLd = {
             "@type": "BreadcrumbList",
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alufurn.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alufurn.com/product" },
+                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://alufurn.com/aluminium-kitchen" },
                 { "@type": "ListItem", "position": 3, "name": "Aluminium Wall Panels", "item": "https://alufurn.com/aluminium-panels" },
             ],
         },

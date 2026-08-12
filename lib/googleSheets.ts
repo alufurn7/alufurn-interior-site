@@ -11,7 +11,23 @@ const auth = credentials
     })
   : null;
 
-export async function addToSheet(data: any) {
+type SheetSubmission = {
+  name?: string;
+  phone?: string;
+  email?: string;
+  projectType?: string;
+  product?: string | string[];
+  budget?: string;
+  location?: string;
+  city?: string;
+  message?: string;
+  scheduleDate?: string;
+  uploadedFile?: string;
+  quantity?: string;
+  status?: string;
+};
+
+export async function addToSheet(data: SheetSubmission) {
   if (!auth) throw new Error("Google auth not configured");
 
   const sheets = google.sheets({ version: "v4", auth });

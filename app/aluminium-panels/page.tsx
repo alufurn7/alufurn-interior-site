@@ -246,10 +246,10 @@ export default function AluminiumPanelsPage() {
                                 The Rise of Aluminium Wall Panels in Indian Architecture
                             </h2>
                             <p className="text-brand-primary/70 text-sm md:text-base font-light leading-relaxed mb-6">
-                                Aluminium wall panels have moved from niche architectural application to mainstream premium choice across India's residential and commercial design sectors. Architects are specifying aluminium panels where they once defaulted to stone cladding, timber wall finishes, and composite materials.
+                                Aluminium wall panels have moved from niche architectural application to mainstream premium choice across India&apos;s residential and commercial design sectors. Architects are specifying aluminium panels where they once defaulted to stone cladding, timber wall finishes, and composite materials.
                             </p>
                             <p className="text-brand-primary/70 text-sm md:text-base font-light leading-relaxed mb-8">
-                                For building facades, aluminium cladding is corrosion-resistant (critical in coastal zones like Calicut), non-combustible for fire safety compliance, and dimensionally stable across India's extremes. For interiors, aluminium panels deliver a premium aesthetic that endures through years of daily contact — scratch-resistant, moisture-proof, and easy to clean.
+                                For building facades, aluminium cladding is corrosion-resistant (critical in coastal zones like Calicut), non-combustible for fire safety compliance, and dimensionally stable across India&apos;s extremes. For interiors, aluminium panels deliver a premium aesthetic that endures through years of daily contact — scratch-resistant, moisture-proof, and easy to clean.
                             </p>
                             <ul className="space-y-3">
                                 {advantages.map((adv) => (

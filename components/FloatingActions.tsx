@@ -2,17 +2,15 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { Mail, Bot, ArrowUp, X, MessageSquare } from "lucide-react";
+import { Mail, Bot, ArrowUp, MessageSquare } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useQuote } from "./AppWrapper";
 
 const Chatbot = dynamic(() => import("./Chatbot"), { ssr: false });
 
 /* ── Scroll Detection Hook ── */
-function useScrollVisibility(debounceMs = 200) {
+function useScrollVisibility() {
     const [pastHero, setPastHero] = useState(false);
-    const [isScrolling, setIsScrolling] = useState(false);
-    const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const rafRef = useRef<number | null>(null);
 
     const handleScroll = useCallback(() => {
@@ -23,21 +21,14 @@ function useScrollVisibility(debounceMs = 200) {
             const heroHeightPx = typeof window !== "undefined" ? window.innerHeight : 0;
 
             setPastHero(scrollY > heroHeightPx);
-            setIsScrolling(true);
-
-            if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
-            scrollTimeoutRef.current = setTimeout(() => {
-                setIsScrolling(false);
-            }, debounceMs);
         });
-    }, [debounceMs]);
+    }, []);
 
     useEffect(() => {
         handleScroll();
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
             if (rafRef.current) cancelAnimationFrame(rafRef.current);
         };
     }, [handleScroll]);

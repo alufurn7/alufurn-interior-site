@@ -24,7 +24,7 @@ const slides = [
         line2: "YOUR IDENTITY",
         subline: "Bespoke aluminium kitchens crafted around your life.",
         cta: "Explore Kitchens",
-        href: "/product#kitchen",
+        href: "/aluminium-kitchen",
         isQuote: false,
     },
     {

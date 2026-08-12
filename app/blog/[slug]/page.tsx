@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         images: [ogImage],
       },
     };
-  } catch (e) {
+  } catch {
     return {
       title: 'Post Not Found',
     };
@@ -69,7 +69,7 @@ export default async function BlogPostPage({ params }: Props) {
   let post;
   try {
     post = getPostBySlug(resolvedParams.slug);
-  } catch (e) {
+  } catch {
     notFound();
   }
 
@@ -179,4 +179,3 @@ export default async function BlogPostPage({ params }: Props) {
     </>
   );
 }
-

@@ -7,7 +7,6 @@ import {
     Phone,
     MapPin,
     Clock,
-    Send,
     ArrowRight,
     CheckCircle,
     ChevronDown,
@@ -209,7 +208,7 @@ const ContactPage = () => {
                 const data = await response.json();
                 alert(data.error || "Something went wrong.");
             }
-        } catch (error) {
+        } catch {
             alert("Connection error. Please try again.");
         } finally {
             setIsSubmitting(false);

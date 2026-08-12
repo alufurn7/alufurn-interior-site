@@ -90,7 +90,7 @@ export default function CatalogSection() {
                 setSubmitMessage(data.error || 'Something went wrong. Please try again.');
                 alert(data.error || 'Something went wrong. Please try again.');
             }
-        } catch (error) {
+        } catch {
             setSubmitStatus('error');
             setSubmitMessage('An error occurred. Please try again later.');
             alert('An error occurred. Please try again later.');

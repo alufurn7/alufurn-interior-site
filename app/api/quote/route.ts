@@ -21,6 +21,26 @@ type TelegramData = {
     quantity?: string;
 };
 
+type QuoteRequest = {
+    name?: string;
+    phone?: string;
+    email?: string;
+    projectType?: string;
+    product?: string | string[];
+    budget?: string;
+    location?: string;
+    city?: string;
+    timeline?: string;
+    message?: string;
+    scheduleDate?: string;
+    date?: string;
+    quantity?: string;
+    status?: string;
+    uploadedFile?: string;
+    honeypot?: string;
+    startTime?: number;
+};
+
 // Telegram Function
 const sendTelegramMessage = async (data: TelegramData) => {
     try {
@@ -68,7 +88,7 @@ ${data.message || "No additional message."}
 };
 
 // AiSensy WhatsApp Notification Function
-const sendWhatsAppNotification = async (body: any) => {
+const sendWhatsAppNotification = async (body: QuoteRequest) => {
     try {
         if (!process.env.AISENSY_API_KEY) {
             console.warn("AISENSY_API_KEY is not defined. Skipping WhatsApp.");
@@ -76,7 +96,7 @@ const sendWhatsAppNotification = async (body: any) => {
         }
 
         // Sanitize text for WhatsApp template safety
-        const cleanText = (value: any, fallback = "N/A"): string => {
+        const cleanText = (value: unknown, fallback = "N/A"): string => {
             if (!value) return fallback;
             return (
                 String(value)
@@ -163,7 +183,7 @@ const sendWhatsAppNotification = async (body: any) => {
 
 export async function POST(req: Request) {
     try {
-        const body = await req.json();
+        const body = (await req.json()) as QuoteRequest;
         console.log("Incoming Quote Data:", body);
 
         const {

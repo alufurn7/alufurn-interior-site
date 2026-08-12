@@ -275,7 +275,7 @@ export default function AluminiumDoorsPage() {
                             </span>
                             <div className="h-px w-10 bg-brand-gold mb-6" />
                             <h2 className="text-3xl md:text-4xl font-bold text-brand-primary tracking-tighter uppercase leading-tight mb-6">
-                                Why India's Top Architects Are Switching to Aluminium Interior Doors
+                                Why India&apos;s Top Architects Are Switching to Aluminium Interior Doors
                             </h2>
                             <p className="text-brand-primary/70 text-sm md:text-base font-light leading-relaxed mb-6">
                                 Solid wood interior doors in India absorb moisture in monsoon, expand, and then crack in the dry season — they stick, warp, and eventually fail to close flush. In coastal cities like Calicut, the problem is particularly severe. Aluminium does not absorb moisture and is dimensionally stable across all Indian climate zones.
@@ -315,7 +315,7 @@ export default function AluminiumDoorsPage() {
                                 Custom Aluminium Door Manufacturing — From 1 Door to 100 Units
                             </h2>
                             <p className="text-white/65 text-sm md:text-base font-light leading-relaxed mb-5">
-                                ALUFURN's door manufacturing spans single residential doors through to developer-scale supply of 50–100+ units. Our vertically integrated production means aluminium profiles, surface finishing, glazing, and hardware fitting are all completed at our in-house facility — eliminating the quality variance of multi-contractor projects.
+                                ALUFURN&apos;s door manufacturing spans single residential doors through to developer-scale supply of 50–100+ units. Our vertically integrated production means aluminium profiles, surface finishing, glazing, and hardware fitting are all completed at our in-house facility — eliminating the quality variance of multi-contractor projects.
                             </p>
                             <p className="text-white/65 text-sm md:text-base font-light leading-relaxed mb-8">
                                 We have supplied aluminium interior doors for luxury 3BHK residences in Patna, high-rise developer projects in Jaipur, and architect-led villa projects in Calicut — with a firm lead time of 3–5 weeks from design approval.

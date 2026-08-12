@@ -70,7 +70,7 @@ export default function Chatbot({ isOpen, onClose }: ChatbotProps) {
       }
 
       setView('chat')
-    } catch (err) {
+        } catch {
       alert("Something went wrong. Please try again.")
     } finally {
       setIsSubmitting(false)

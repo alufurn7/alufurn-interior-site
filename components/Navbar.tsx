@@ -90,8 +90,11 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "unset";
-            setMobileProductsOpen(false);
         }
+
+        return () => {
+            document.body.style.overflow = "unset";
+        };
     }, [mobileMenuOpen]);
 
     /* ── Derived state ── */
@@ -136,7 +139,7 @@ export default function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
                                 : "/logo_white.png"
                         }
                         alt="ALUFURN"
-                        width={120}
+                        width={160}
                         height={40}
                         className="h-8 md:h-10 w-auto transition-all duration-500"
                         priority

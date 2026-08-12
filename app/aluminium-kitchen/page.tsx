@@ -263,7 +263,7 @@ export default function AluminiumKitchenPage() {
                                 Why Indian Homeowners Are Switching to Aluminium Modular Kitchens
                             </h2>
                             <p className="text-brand-primary/70 text-sm md:text-base font-light leading-relaxed mb-6">
-                                India's kitchen environment is unforgiving. High humidity, monsoon moisture, cooking steam, and tropical heat make conventional plywood or MDF kitchens a long-term liability. Within 5–8 years, wooden kitchen cabinets warp, swell, and become breeding grounds for termites and mould.
+                                India&apos;s kitchen environment is unforgiving. High humidity, monsoon moisture, cooking steam, and tropical heat make conventional plywood or MDF kitchens a long-term liability. Within 5–8 years, wooden kitchen cabinets warp, swell, and become breeding grounds for termites and mould.
                             </p>
                             <p className="text-brand-primary/70 text-sm md:text-base font-light leading-relaxed mb-8">
                                 ALUFURN aluminium modular kitchens are engineered for Indian climatic conditions — 100% waterproof, termite-proof, and resistant to humidity levels across Patna, Jaipur, and coastal Calicut. The result is a kitchen that looks identical on day 3,650 as it did on day one.
@@ -344,7 +344,7 @@ export default function AluminiumKitchenPage() {
                             </span>
                             <div className="h-px w-10 bg-brand-gold mb-6" />
                             <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tighter uppercase leading-tight mb-6">
-                                India's Most Precise Aluminium Kitchen Manufacturer
+                                India&apos;s Most Precise Aluminium Kitchen Manufacturer
                             </h2>
                             <p className="text-white/65 text-sm md:text-base font-light leading-relaxed mb-5">
                                 ALUFURN is one of the few aluminium kitchen manufacturers in India that operates a fully in-house, automated production facility. German CNC routing machines cut every panel to ±0.1mm accuracy — the same precision used by top European cabinet makers.

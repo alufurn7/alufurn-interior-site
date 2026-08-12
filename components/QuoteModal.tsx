@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, ArrowLeft, CheckCircle2, MessageSquare, Phone } from "lucide-react";
+import { X, ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
 
 /**
  * Brand Colors:
@@ -86,7 +86,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 const data = await response.json();
                 alert(data.error || "Something went wrong.");
             }
-        } catch (error) {
+        } catch {
             alert("Connection error. Please try again.");
         } finally {
             setIsSubmitting(false);
@@ -404,7 +404,7 @@ function Input({ label, value, onChange, placeholder, type = "text", required = 
     const inputRef = useRef<HTMLInputElement>(null);
     useEffect(() => {
         if (required && inputRef.current) inputRef.current.focus();
-    }, []);
+    }, [required]);
 
     return (
         <div className="space-y-3">

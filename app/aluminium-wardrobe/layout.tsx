@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Aluminium Wardrobes India — Custom Walk-In & Sliding | Alufurn",
+    title: "Aluminium Wardrobes India — Custom Walk-In & Sliding",
     description:
         "Custom aluminium wardrobes — walk-in, sliding & fitted systems. Waterproof, termite-proof. Alufurn showrooms in Patna, Jaipur & Calicut. Free design quote.",
     alternates: {

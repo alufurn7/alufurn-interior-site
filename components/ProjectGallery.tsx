@@ -51,20 +51,6 @@ const projects = [
     },
 ];
 
-const testimonial = {
-    quote:
-        "ALUFURN delivered exceptional precision — every panel, every hinge was exactly to spec. Their aluminium systems saved us weeks of installation time across all 12 units. The finish quality impressed our buyers.",
-    name: "Vikram Sethi",
-    role: "Principal Architect & Developer, Jaipur",
-};
-
-const stats = [
-    { value: "0.1 mm", label: "Machining Accuracy" },
-    { value: "100%", label: "Automated Production" },
-    { value: "E0", label: "Formaldehyde Standard" },
-    { value: "25+", label: "Projects Delivered" },
-];
-
 /* ──────────────────────────────────────────────
    Component
    ────────────────────────────────────────────── */

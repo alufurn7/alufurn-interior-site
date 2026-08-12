@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
-import { ArrowRight, Calendar, Clock } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
 
 export const metadata = {
   title: 'Aluminium Kitchen & Interior Design Blog — ALUFURN India',

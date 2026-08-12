@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Award, Users, MapPin, CheckCircle2, Cpu, ShieldCheck, Clock, Star } from "lucide-react";
+import { MapPin, CheckCircle2, Cpu, ShieldCheck, Clock, Star } from "lucide-react";
 
 const milestones = [
     { year: "2018", event: "Founded in Patna, Bihar — first aluminium-only interior brand in East India." },
@@ -90,7 +90,7 @@ export default function AboutPage() {
                         About Alufurn
                     </h1>
                     <p className="text-white/70 text-sm md:text-base font-light max-w-xl leading-relaxed">
-                        India's leading manufacturer of precision-engineered aluminium interiors — built for spaces that demand permanence.
+                        India&apos;s leading manufacturer of precision-engineered aluminium interiors — built for spaces that demand permanence.
                     </p>
                 </div>
             </div>

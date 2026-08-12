@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FloatingActions from "@/components/FloatingActions";
 import AppWrapper from "@/components/AppWrapper";
 
 /* ── Fonts ── */

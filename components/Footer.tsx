@@ -51,8 +51,6 @@ const supportLinks = [
     { label: "Contact Us", href: "/contact" },
     { label: "Showrooms", href: "/experience" },
     { label: "Catalog Download", href: "/catalog" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-of-service" },
 ];
 
 const socialLinks = [
@@ -113,7 +111,7 @@ export default function Footer() {
                         <Image
                             src="/logo_white.png"
                             alt="ALUFURN"
-                            width={140}
+                            width={160}
                             height={40}
                             className="h-10 w-auto mb-6"
                         />

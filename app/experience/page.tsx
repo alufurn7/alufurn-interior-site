@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import {
     Layout,
     MapPin,
-    Clock,
-    Phone,
     Calendar,
     Eye,
     Sparkles,
@@ -29,7 +27,6 @@ export default function ExperienceCenter() {
         city: 'Gurugram'
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
     const [startTime] = useState(Date.now());
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -44,14 +41,13 @@ export default function ExperienceCenter() {
             });
 
             if (response.ok) {
-                setIsSuccess(true);
                 setFormData({ name: '', phone: '', date: '', city: 'Gurugram' });
                 alert('Thank you! Your visit has been scheduled. Our team will contact you to confirm the timing.');
             } else {
                 const data = await response.json();
                 alert(data.error || "Something went wrong.");
             }
-        } catch (error) {
+        } catch {
             alert("Connection error. Please try again.");
         } finally {
             setIsSubmitting(false);
@@ -79,15 +75,6 @@ export default function ExperienceCenter() {
             title: "Premium Quality Assurance",
             desc: "Experience the precision of German engineering and the durability of high-grade aluminium."
         }
-    ];
-
-    const galleryImages = [
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1600&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1600&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1503387762-592dec5832f2?q=80&w=1600&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=1600&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1600&auto=format&fit=crop"
     ];
 
     return (
@@ -150,7 +137,7 @@ export default function ExperienceCenter() {
                         >
                             <h2 className="text-3xl md:text-5xl font-bold text-brand-primary mb-12 tracking-tighter uppercase">Beyond a Showroom</h2>
                             <p className="text-brand-primary/60 text-lg md:text-xl font-light leading-relaxed mb-16">
-                                Our Experience Center is a curated space designed to inspire. It's where architectural precision meets lifestyle design. Witness the future of home interiors through real-life product setups, premium finishes, and materials that are proudly manufactured in India.
+                                Our Experience Center is a curated space designed to inspire. It&apos;s where architectural precision meets lifestyle design. Witness the future of home interiors through real-life product setups, premium finishes, and materials that are proudly manufactured in India.
                             </p>
                         </motion.div>
 

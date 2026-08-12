@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Aluminium Interior Doors — Pivot, Flush & Sliding | Alufurn",
+    title: "Aluminium Interior Doors — Pivot, Flush & Sliding",
     description:
         "Premium aluminium pivot, flush & sliding interior doors. Custom manufactured in India by Alufurn. Showrooms in Patna, Jaipur & Calicut. Free quote.",
     alternates: {

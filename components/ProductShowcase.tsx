@@ -96,14 +96,14 @@ const extendedProducts = [
         title: "Aluminium Panels",
         description: "Architectural wall finishes for feature walls, ceilings, and facades.",
         image: "/images/wallpanel_01.webp",
-        href: "/product#aluminium-panels",
+        href: "/aluminium-panels",
     },
     {
         eyebrow: "Doors",
         title: "Interior Doors",
         description: "Aluminium-framed doors in wood, glass, and frosted panel options.",
         image: "/images/door_01.webp",
-        href: "/product#interior-doors",
+        href: "/aluminium-doors",
     },
 ];
 
@@ -153,7 +153,7 @@ export default function ProductShowcase() {
                         title="Kitchen"
                         description="Our bespoke aluminium kitchens are precision-crafted — featuring premium material integration and German-standard hardware for a culinary space that endures."
                         image="/images/kitchen_01.webp"
-                        link="/product#kitchen"
+                        link="/aluminium-kitchen"
                     />
 
                     <ShowcaseItem
@@ -314,4 +314,3 @@ export default function ProductShowcase() {
         </>
     );
 }
-

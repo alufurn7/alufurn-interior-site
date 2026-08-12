@@ -117,7 +117,7 @@ export default function WardrobePage() {
                             <span className="text-brand-gold text-[10px] uppercase tracking-[0.5em] mb-4 block font-bold">Why Aluminium</span>
                             <div className="h-px w-10 bg-brand-gold mb-6" />
                             <h2 className="text-3xl md:text-4xl font-bold text-brand-primary tracking-tighter uppercase leading-tight mb-6">Why Indian Homeowners Are Switching to Aluminium Wardrobes</h2>
-                            <p className="text-brand-primary/70 text-sm md:text-base font-light leading-relaxed mb-6">India's climate is the enemy of wood-based wardrobes. Monsoon humidity causes plywood to swell and doors to jam. Summer heat causes MDF to crack and delaminate. Within 7–10 years, most plywood wardrobes require expensive repairs or full replacement.</p>
+                            <p className="text-brand-primary/70 text-sm md:text-base font-light leading-relaxed mb-6">India&apos;s climate is the enemy of wood-based wardrobes. Monsoon humidity causes plywood to swell and doors to jam. Summer heat causes MDF to crack and delaminate. Within 7–10 years, most plywood wardrobes require expensive repairs or full replacement.</p>
                             <p className="text-brand-primary/70 text-sm md:text-base font-light leading-relaxed mb-8">ALUFURN aluminium wardrobes are engineered specifically for Indian conditions — 100% waterproof, termite-proof, and dimensionally stable whether the humidity is 20% or 95%. The doors align as perfectly on year twenty as they did on day one.</p>
                             <ul className="space-y-3">
                                 {advantages.map((adv) => (
