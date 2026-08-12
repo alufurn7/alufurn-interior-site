@@ -8,6 +8,13 @@ import FloatingActions from "@/components/FloatingActions";
 
 const QuoteModal = dynamic(() => import("@/components/QuoteModal"), { ssr: false });
 
+// TEMPORARY MATECIA EVENT POPUP:
+// Remove this dynamic import and <TemporaryMateciaPopup /> below after the event.
+const TemporaryMateciaPopup = dynamic(
+    () => import("@/components/TemporaryMateciaPopup"),
+    { ssr: false }
+);
+
 interface QuoteContextType {
     openQuote: () => void;
 }
@@ -49,6 +56,7 @@ export default function AppWrapper({ children }: { children: React.ReactNode }) 
                 <Footer />
                 <FloatingActions />
                 {shouldRenderQuote && <QuoteModal isOpen={isQuoteOpen} onClose={closeQuote} />}
+                <TemporaryMateciaPopup />
             </div>
         </QuoteContext.Provider>
     );
